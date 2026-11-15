@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-on-secondary-container: #590028;
+  --color-surface-container: #221d2a;
+  --color-surface-dim: #15111e;
+  --color-on-primary: #00363a;
+  --color-inverse-primary: #006970;
+  --color-inverse-on-surface: #332e3c;
+  --color-on-secondary-fixed-variant: #8f0044;
+  --color-on-secondary: #65002e;
+  --color-on-primary-fixed: #002022;
+  --color-tertiary-fixed-dim: #ffba20;
+  --color-on-background: #e8dff1;
+  --color-on-secondary-fixed: #3f001a;
+  --color-on-tertiary: #412d00;
+  --color-surface-variant: #383240;
+  --color-tertiary: #fff4e8;
+  --color-error: #ffb4ab;
+  --color-secondary-fixed: #ffd9e1;
+  --color-secondary-container: #ff4a8d;
+  --color-on-primary-container: #006970;
+  --color-on-tertiary-fixed-variant: #5e4200;
+  --color-primary: #dbfcff;
+  --color-tertiary-container: #ffd386;
+  --color-error-container: #93000a;
+  --color-outline-variant: #3b494b;
+  --color-secondary: #ffb1c4;
+  --color-background: #15111e;
+  --color-tertiary-fixed: #ffdea8;
+  --color-on-tertiary-fixed: #271900;
+  --color-primary-container: #00f0ff;
+  --color-on-surface-variant: #b9cacb;
+  --color-on-tertiary-container: #7d5800;
+  --color-on-error-container: #ffdad6;
+  --color-surface-tint: #00dbe9;
+  --color-primary-fixed-dim: #00dbe9;
+  --color-surface-container-high: #2d2835;
+  --color-outline: #849495;
+  --color-surface-container-lowest: #100c18;
+  --color-on-primary-fixed-variant: #004f54;
+  --color-surface: #15111e;
+  --color-on-error: #690005;
+  --color-secondary-fixed-dim: #ffb1c4;
+  --color-surface-container-low: #1e1926;
+  --color-primary-fixed: #7df4ff;
+  --color-surface-container-highest: #383240;
+  --color-surface-bright: #3c3745;
+  --color-on-surface: #e8dff1;
+  --color-inverse-surface: #e8dff1;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Hanken Grotesk", sans-serif;
+  --font-mono-label: "Space Mono", monospace;
+
+  --radius-default: 0.125rem;
+}
+
+@layer base {
+  body {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    background-color: #15111e;
+    color: #e8dff1;
+  }
+}
+
+.font-display-hero {
+  font-family: "Space Grotesk", sans-serif;
+}
+.font-headline-lg,
+.font-headline-md,
+.font-headline-sm {
+  font-family: "Space Grotesk", sans-serif;
+}
+.font-label-lg,
+.font-label-md,
+.font-label-sm {
+  font-family: "Space Mono", monospace;
+}
+.font-body-lg,
+.font-body-md,
+.font-body-sm {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.text-display-hero {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 700;
+}
+.text-display-hero-mobile {
+  font-size: 38px;
+  line-height: 46px;
+  font-weight: 700;
+}
+.text-headline-lg {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+}
+.text-headline-lg-mobile {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+.text-headline-md {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+}
+.text-headline-sm {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+}
+.text-body-lg {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.text-body-md {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.text-body-sm {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.text-label-lg {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.text-label-md {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+}
+.text-label-sm {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.rounded-DEFAULT {
+  border-radius: 0.125rem;
+}
+
+/* CRT Scanline Overlay Effect */
+.crt-overlay {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.16) 0px,
+    rgba(0, 0, 0, 0.16) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+.crt-overlay-heavy {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.34) 0px,
+    rgba(0, 0, 0, 0.34) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+}
+
+.retro-grid {
+  background-size: 32px 32px;
+  background-image:
+    linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+}
+
+.holo-stamp {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 240, 255, 0.85),
+    rgba(255, 74, 141, 0.85),
+    rgba(255, 211, 134, 0.85)
+  );
+}
+
+.arcade-shadow {
+  box-shadow: 4px 4px 0px #ff4a8d;
+}
+
+.arcade-shadow-cyan {
+  box-shadow: 4px 4px 0px #00f0ff;
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink {
+    animation: none;
+  }
+}

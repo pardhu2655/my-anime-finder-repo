@@ -1,0 +1,8 @@
+{
+  "name": "NEO-TOKYO.99 // ANIME STARTER VAULT",
+  "description": "A retro 1999 cyber-arcade anime starter vault featuring a 30-second gateway quiz, curated hall of fame cassette tiers, and an interactive anime roulette.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

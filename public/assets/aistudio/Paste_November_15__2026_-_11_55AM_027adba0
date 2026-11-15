@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEO-TOKYO.99 // ANIME STARTER VAULT</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Space Grotesk, Space Mono, Hanken Grotesk -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=Space+Grotesk:wght@300..700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-container": "#590028",
+            "surface-container": "#221d2a",
+            "surface-dim": "#15111e",
+            "on-primary": "#00363a",
+            "inverse-primary": "#006970",
+            "inverse-on-surface": "#332e3c",
+            "on-secondary-fixed-variant": "#8f0044",
+            "on-secondary": "#65002e",
+            "on-primary-fixed": "#002022",
+            "tertiary-fixed-dim": "#ffba20",
+            "on-background": "#e8dff1",
+            "on-secondary-fixed": "#3f001a",
+            "on-tertiary": "#412d00",
+            "surface-variant": "#383240",
+            "tertiary": "#fff4e8",
+            "error": "#ffb4ab",
+            "secondary-fixed": "#ffd9e1",
+            "secondary-container": "#ff4a8d",
+            "on-primary-container": "#006970",
+            "on-tertiary-fixed-variant": "#5e4200",
+            "primary": "#dbfcff",
+            "tertiary-container": "#ffd386",
+            "error-container": "#93000a",
+            "outline-variant": "#3b494b",
+            "secondary": "#ffb1c4",
+            "background": "#15111e",
+            "tertiary-fixed": "#ffdea8",
+            "on-tertiary-fixed": "#271900",
+            "primary-container": "#00f0ff",
+            "on-surface-variant": "#b9cacb",
+            "on-tertiary-container": "#7d5800",
+            "on-error-container": "#ffdad6",
+            "surface-tint": "#00dbe9",
+            "primary-fixed-dim": "#00dbe9",
+            "surface-container-high": "#2d2835",
+            "outline": "#849495",
+            "surface-container-lowest": "#100c18",
+            "on-primary-fixed-variant": "#004f54",
+            "surface": "#15111e",
+            "on-error": "#690005",
+            "secondary-fixed-dim": "#ffb1c4",
+            "surface-container-low": "#1e1926",
+            "primary-fixed": "#7df4ff",
+            "surface-container-highest": "#383240",
+            "surface-bright": "#3c3745",
+            "on-surface": "#e8dff1",
+            "inverse-surface": "#e8dff1"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "gutter-mobile": "1rem",
+            "margin": "2.5rem",
+            "margin-mobile": "1.25rem"
+          },
+          "fontFamily": {
+            "label-md": ["Space Mono"],
+            "label-sm": ["Space Mono"],
+            "body-sm": ["Hanken Grotesk"],
+            "display-hero": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "label-lg": ["Space Mono"],
+            "body-md": ["Hanken Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "body-lg": ["Hanken Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "display-hero-mobile": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "700" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "display-hero": ["64px", { "lineHeight": "72px", "fontWeight": "700" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "700" }],
+            "display-hero-mobile": ["38px", { "lineHeight": "46px", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* CRT Scanline Overlay Effect */
+    .crt-overlay {
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15) 0px,
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      pointer-events: none;
+    }
+    .retro-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+    }
+    .holo-stamp {
+      background: linear-gradient(135deg, rgba(0,240,255,0.8), rgba(255,74,141,0.8), rgba(255,211,134,0.8));
+    }
+    .arcade-shadow {
+      box-shadow: 4px 4px 0px #ff4a8d;
+    }
+    .arcade-shadow-cyan {
+      box-shadow: 4px 4px 0px #00f0ff;
+    }
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .cursor-blink {
+      animation: blink 1s infinite;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background selection:bg-secondary-container selection:text-white min-h-screen flex flex-col font-body-md text-body-md retro-grid relative">
+<!-- TOP NAV BAR (Shared Component Anchor) -->
+<header class="w-full bg-surface-container-lowest border-b border-primary-container/30 shadow-[0_4px_0_0_#ff4a8d] sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 py-3 max-w-full mx-auto">
+<!-- Brand Logo / Product Name -->
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-DEFAULT bg-secondary-container flex items-center justify-center text-surface-container-lowest font-headline-sm font-bold arcade-shadow-cyan">
+<span class="material-symbols-outlined text-surface-container-lowest" data-icon="terminal">terminal</span>
+</div>
+<a class="text-headline-sm font-headline-sm uppercase tracking-widest text-primary-container drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" href="#hero">
+          NEO-TOKYO.99 // ARCHIVE
+        </a>
+<span class="hidden lg:inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-surface-container-high border border-primary-container/40 text-primary-container font-label-sm text-label-sm tracking-widest">
+          SYS_READY v1.99
+        </span>
+</div>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center space-x-6">
+<a class="border-b-2 border-secondary-container text-secondary-container font-label-md text-label-md tracking-wider pb-1 transition-all" href="#quiz">GATEWAY QUIZ</a>
+<a class="text-on-surface-variant font-label-md text-label-md tracking-wider hover:text-primary-container hover:bg-surface-container-high transition-all px-2 py-1 rounded-DEFAULT" href="#hall-of-fame">HALL OF FAME</a>
+<a class="text-on-surface-variant font-label-md text-label-md tracking-wider hover:text-primary-container hover:bg-surface-container-high transition-all px-2 py-1 rounded-DEFAULT" href="#roulette">ROULETTE</a>
+<a class="text-on-surface-variant font-label-md text-label-md tracking-wider hover:text-primary-container hover:bg-surface-container-high transition-all px-2 py-1 rounded-DEFAULT" href="#guide">CHANNELS</a>
+</nav>
+<!-- Trailing Actions & Search & Avatar -->
+<div class="flex items-center gap-3">
+<!-- Search Console Quick Inset -->
+<div class="hidden xl:flex items-center bg-surface-container-lowest border border-outline-variant/60 px-3 py-1.5 rounded-DEFAULT focus-within:border-primary-container">
+<span class="material-symbols-outlined text-outline-variant text-base mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none p-0 text-on-surface text-label-sm font-label-sm focus:ring-0 placeholder:text-outline w-48" placeholder="SEARCH ARCHIVE: [ENTER KEYWORD]..." type="text"/>
+<span class="text-primary-container font-label-sm cursor-blink">█</span>
+</div>
+<!-- Trailing Icon Actions -->
+<div class="hidden sm:flex items-center gap-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-primary-container hover:bg-surface-container-high rounded-DEFAULT transition-all" title="Terminal Access">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+<button class="p-1.5 hover:text-primary-container hover:bg-surface-container-high rounded-DEFAULT transition-all" title="TV CRT Preset">
+<span class="material-symbols-outlined" data-icon="tv">tv</span>
+</button>
+<button class="p-1.5 hover:text-primary-container hover:bg-surface-container-high rounded-DEFAULT transition-all" title="Audio Synth Beeper">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+</button>
+</div>
+<!-- Secondary CTA -->
+<button class="hidden lg:flex items-center border border-secondary-container text-secondary-container px-3 py-1 rounded-DEFAULT font-label-md text-label-md tracking-widest hover:bg-secondary-container/20 transition-all">
+          INSERT COIN
+        </button>
+<!-- Trailing Primary Action -->
+<a class="flex items-center bg-primary-container text-surface-container-lowest font-label-md text-label-md px-4 py-2 rounded-DEFAULT uppercase tracking-wider font-bold shadow-[2px_2px_0px_#ff4a8d] hover:translate-x-[1px] hover:translate-y-[1px] transition-all" href="#quiz">
+          START SIGNAL
+        </a>
+<!-- Cyberpunk Avatar -->
+<div class="w-9 h-9 rounded-DEFAULT border border-primary-container/80 overflow-hidden relative p-0.5 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A pixel-art cyberpunk anime character profile avatar with a glowing neon cyan visor and magenta spiky hair set against a dark grid background with vibrant rim lighting and 90s anime aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEWdSVC5rhAzMKDdUVz48Flq2EfN5rB8PFo6w8uUV32lNblSk7OlwAv97VwyvgfPxXtQv6_knAcH4Z7DZolU43TawKj833sujcR_eU9Sv_1ykSBKLJgILkiowKBrAanLJyaBxYXJyQYEjPKEReURrg_Nru5YdRsAv8t498isUjWY5jrkQjMRZl_Tvb7c4S9e9ZNh5Qs6NvoLkKdE4CQ69gFF0TWzGEEHSJRkPtMtTG"/>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+<!-- 1. RETRO CRT HERO SECTION -->
+<section class="relative rounded-lg border border-primary-container/40 bg-surface-container-lowest p-6 sm:p-10 arcade-shadow overflow-hidden" id="hero">
+<!-- Ambient CRT scanline overlay -->
+<div class="crt-overlay absolute inset-0 z-10 pointer-events-none"></div>
+<!-- Glowing Scanline Ticker -->
+<div class="relative z-20 flex items-center justify-between border-b border-primary-container/30 pb-3 mb-8 bg-surface-container-low/70 px-4 py-2 rounded-DEFAULT backdrop-blur-sm">
+<div class="flex items-center gap-2 overflow-hidden">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse shadow-[0_0_8px_#ff4a8d]"></span>
+<span class="font-label-md text-label-md text-primary-container tracking-widest truncate">
+            SYS.STATUS: BROADCAST LIVE // 4,892 NEWBIES CONVERTED THIS WEEK // INSERT COIN TO ROLL
+          </span>
+</div>
+<div class="hidden sm:flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="videocam">videocam</span> NTSC 60Hz</span>
+<span class="text-tertiary-container font-bold">CH-99 STEREO</span>
+</div>
+</div>
+<!-- Hero Main Content Grid -->
+<div class="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-DEFAULT bg-surface-container-high border border-secondary-container text-secondary font-label-sm text-label-sm uppercase tracking-widest">
+<span class="material-symbols-outlined text-xs text-secondary-container" data-icon="auto_awesome">auto_awesome</span>
+            OVERWHELMED BY 10,000 ANIME? LET OUR 1999 CYBER-ORACLE FIND YOUR GATEWAY
+          </div>
+<h1 class="text-display-hero-mobile sm:text-display-hero font-display-hero text-on-surface tracking-tight uppercase leading-none">
+            HOW TO CHOOSE YOUR <span class="text-primary-container drop-shadow-[0_0_12px_rgba(0,240,255,0.7)]">FIRST ANIME</span> WITHOUT GETTING OVERWHELMED
+          </h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl">
+            Tired of confusing 900-episode sagas, filler episodes, and obscure inside jokes? Step into our retro cybernetic chamber. In three simple answers, our neural engine delivers the exact beginner masterpiece tailored to your tastes.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap gap-4 pt-2">
+<a class="flex items-center gap-3 bg-primary-container text-surface-container-lowest font-headline-sm font-bold px-6 py-4 rounded-DEFAULT arcade-shadow hover:translate-x-1 hover:translate-y-1 transition-all uppercase tracking-wider" href="#quiz">
+<span class="material-symbols-outlined" data-icon="play_arrow">play_arrow</span>
+              LAUNCH 3-QUESTION GATEWAY QUIZ
+            </a>
+<a class="flex items-center gap-3 bg-surface-container-high border-2 border-secondary-container text-secondary font-headline-sm font-bold px-6 py-4 rounded-DEFAULT shadow-[4px_4px_0px_#00f0ff] hover:bg-secondary-container/20 hover:translate-x-1 hover:translate-y-1 transition-all uppercase tracking-wider" href="#roulette">
+<span class="material-symbols-outlined text-secondary-container" data-icon="casino">casino</span>
+              SPIN ANIME ROULETTE
+            </a>
+</div>
+</div>
+<!-- Hero Visual/CRT Arcade Deck -->
+<div class="lg:col-span-4 relative">
+<div class="bg-surface-container-low border-2 border-primary-container/50 rounded-DEFAULT p-4 arcade-shadow-cyan">
+<div class="relative aspect-video rounded-DEFAULT overflow-hidden border border-outline-variant/60 mb-4 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="A vintage 1990s retro cyberpunk anime scene showing a dimly lit neon alleyway with rain reflections, floating holographic advertisements in kanji, and an anime character with stylish trench coat walking toward a glowing ramen stand in saturated cyan and deep magenta hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCshIR2_vFG4zEKriX-1GYBO2re1rl-pwH05z3hzy1QMd_3Ut2tVIwwqC6BLywLyrHVoa4o-AesUgLZSccYBXy5oKZZUbH59Q43uqMw8MloCN3xJNVLNnMNGbLxk_itCfQRRIuNOY0dS49rdme8gyN2Xlj7XEafTqHWHfqsIIDLKrpwMO2NAZAJEAXZHaic56HZb-ha3xIjcCp9RJChHn_G8d_JaKyb_E6EvXwGa2ee"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/80 border border-primary-container/80 px-2 py-0.5 text-primary-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span> REC [SP-01]
+              </div>
+<div class="absolute top-2 right-2 bg-secondary-container text-white px-2 py-0.5 rounded-DEFAULT font-label-sm font-bold text-label-sm">
+                VAULT #99
+              </div>
+</div>
+<!-- LED Statistics Display -->
+<div class="grid grid-cols-3 gap-2 bg-surface-container-lowest p-3 border border-outline-variant/40 rounded-DEFAULT text-center font-label-sm text-label-sm">
+<div class="border-r border-outline-variant/40 pr-1">
+<div class="text-tertiary-container font-bold text-base">0</div>
+<div class="text-on-surface-variant leading-tight">Fillers Filtered</div>
+</div>
+<div class="border-r border-outline-variant/40 pr-1">
+<div class="text-primary-container font-bold text-base">100%</div>
+<div class="text-on-surface-variant leading-tight">No-Cringe Gateways</div>
+</div>
+<div>
+<div class="text-secondary font-bold text-base">&lt; 25</div>
+<div class="text-on-surface-variant leading-tight">Eps Fast-Tracks</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. INTERACTIVE FEATURE 1: THE 30-SECOND STARTER QUIZ -->
+<section class="space-y-6" id="quiz">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-outline-variant/40 pb-4">
+<div>
+<div class="flex items-center gap-2 text-primary-container font-label-md text-label-md tracking-widest uppercase">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+            NEURAL PATHFINDER ENGINE
+          </div>
+<h2 class="text-headline-lg-mobile sm:text-headline-lg font-headline-lg text-on-surface uppercase tracking-tight">
+            THE 30-SECOND STARTER QUIZ
+          </h2>
+<p class="text-on-surface-variant font-body-md text-body-md">
+            Answer 3 quick preferences. Our arcade logic cross-references 15,000 user reviews to reveal your zero-friction anime match.
+          </p>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 border border-primary-container/30 rounded-DEFAULT">
+<span class="font-label-md text-label-md text-secondary-container">STEP: 01/03</span>
+<span class="text-outline-variant font-label-sm text-label-sm">// CALIBRATING</span>
+</div>
+</div>
+<!-- Quiz Architecture Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left: Quiz Selector Console (7 cols) -->
+<div class="lg:col-span-7 space-y-6 bg-surface-container-low border border-primary-container/40 p-6 rounded-DEFAULT arcade-shadow">
+<!-- STEP 1: What do you normally binge? -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary-container flex items-center gap-2">
+<span class="px-1.5 py-0.5 bg-primary-container text-surface-container-lowest font-bold rounded-DEFAULT">1</span>
+                WHAT DO YOU NORMALLY BINGE ON TV?
+              </label>
+<span class="text-on-surface-variant font-label-sm text-label-sm">SELECT PREFERRED TONE</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="step1-options">
+<button class="quiz-btn text-left p-3 rounded-DEFAULT border border-secondary-container bg-secondary-container/10 text-on-surface hover:bg-secondary-container/20 transition-all flex items-center justify-between group" onclick="selectBinge(this, 'got')">
+<div>
+<div class="font-label-md text-label-md text-secondary group-hover:text-white font-bold">* Game of Thrones / Succession</div>
+<div class="text-on-surface-variant text-label-sm font-label-sm">High stakes, political drama &amp; plot twists</div>
+</div>
+<span class="material-symbols-outlined text-secondary-container" data-icon="check_circle">check_circle</span>
+</button>
+<button class="quiz-btn text-left p-3 rounded-DEFAULT border border-outline-variant bg-surface-container hover:border-primary-container text-on-surface hover:bg-surface-container-high transition-all flex items-center justify-between group" onclick="selectBinge(this, 'crime')">
+<div>
+<div class="font-label-md text-label-md text-on-surface group-hover:text-primary-container">Breaking Bad / True Crime</div>
+<div class="text-on-surface-variant text-label-sm font-label-sm">Psychological mind games &amp; morality</div>
+</div>
+<span class="material-symbols-outlined opacity-0 text-primary-container" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</button>
+<button class="quiz-btn text-left p-3 rounded-DEFAULT border border-outline-variant bg-surface-container hover:border-primary-container text-on-surface hover:bg-surface-container-high transition-all flex items-center justify-between group" onclick="selectBinge(this, 'cyberpunk')">
+<div>
+<div class="font-label-md text-label-md text-on-surface group-hover:text-primary-container">Blade Runner / Matrix / Sci-Fi</div>
+<div class="text-on-surface-variant text-label-sm font-label-sm">Atmospheric synth, noir, philosophy</div>
+</div>
+<span class="material-symbols-outlined opacity-0 text-primary-container" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</button>
+<button class="quiz-btn text-left p-3 rounded-DEFAULT border border-outline-variant bg-surface-container hover:border-primary-container text-on-surface hover:bg-surface-container-high transition-all flex items-center justify-between group" onclick="selectBinge(this, 'marvel')">
+<div>
+<div class="font-label-md text-label-md text-on-surface group-hover:text-primary-container">Marvel / Avengers / Action</div>
+<div class="text-on-surface-variant text-label-sm font-label-sm">Superpowers, hypes, adrenaline battles</div>
+</div>
+<span class="material-symbols-outlined opacity-0 text-primary-container" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</button>
+<button class="quiz-btn text-left p-3 rounded-DEFAULT border border-outline-variant bg-surface-container hover:border-primary-container text-on-surface hover:bg-surface-container-high transition-all flex items-center justify-between sm:col-span-2 group" onclick="selectBinge(this, 'cozy')">
+<div>
+<div class="font-label-md text-label-md text-on-surface group-hover:text-primary-container">Cozy Comfort Shows / Ted Lasso / Ghibli</div>
+<div class="text-on-surface-variant text-label-sm font-label-sm">Warm feelings, laugh-out-loud comedy, zero stress</div>
+</div>
+<span class="material-symbols-outlined opacity-0 text-primary-container" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</button>
+</div>
+</div>
+<!-- STEP 2: Commitment Level -->
+<div class="space-y-3 pt-2">
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary-container flex items-center gap-2">
+<span class="px-1.5 py-0.5 bg-primary-container text-surface-container-lowest font-bold rounded-DEFAULT">2</span>
+              COMMITMENT LEVEL // EPISODE COUNT
+            </label>
+<div class="grid grid-cols-3 gap-2" id="step2-options">
+<button class="commit-btn p-3 text-center rounded-DEFAULT border border-outline-variant bg-surface-container hover:border-primary-container transition-all" onclick="selectCommitment(this, 'movie')">
+<div class="font-label-md text-label-md text-on-surface">Bite-sized Movie</div>
+<div class="text-secondary text-label-sm font-label-sm font-bold">~ 2 HOURS</div>
+</button>
+<button class="commit-btn p-3 text-center rounded-DEFAULT border border-secondary-container bg-secondary-container/10 transition-all" onclick="selectCommitment(this, 'season')">
+<div class="font-label-md text-label-md text-secondary font-bold">* Tight Run</div>
+<div class="text-primary-container text-label-sm font-label-sm font-bold">12 - 24 EPS</div>
+</button>
+<button class="commit-btn p-3 text-center rounded-DEFAULT border border-outline-variant bg-surface-container hover:border-primary-container transition-all" onclick="selectCommitment(this, 'epic')">
+<div class="font-label-md text-label-md text-on-surface">Epic Saga</div>
+<div class="text-on-surface-variant text-label-sm font-label-sm">50+ EPISODES</div>
+</button>
+</div>
+</div>
+<!-- STEP 3: Choose your pacing -->
+<div class="space-y-3 pt-2">
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary-container flex items-center gap-2">
+<span class="px-1.5 py-0.5 bg-primary-container text-surface-container-lowest font-bold rounded-DEFAULT">3</span>
+              NARRATIVE PACING SENSOR
+            </label>
+<div class="grid grid-cols-2 gap-3" id="step3-options">
+<button class="pacing-btn p-3 text-left rounded-DEFAULT border border-secondary-container bg-secondary-container/10 transition-all flex items-center gap-3" onclick="selectPacing(this, 'fast')">
+<span class="material-symbols-outlined text-secondary-container text-2xl" data-icon="bolt">bolt</span>
+<div>
+<div class="font-label-md text-label-md text-secondary font-bold">* Breakneck Adrenaline</div>
+<div class="text-on-surface-variant text-label-sm font-label-sm">Cliffhangers from episode 1, zero drag</div>
+</div>
+</button>
+<button class="pacing-btn p-3 text-left rounded-DEFAULT border border-outline-variant bg-surface-container hover:border-primary-container transition-all flex items-center gap-3" onclick="selectPacing(this, 'slow')">
+<span class="material-symbols-outlined text-outline text-2xl" data-icon="hourglass_top">hourglass_top</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Slow-Burn Mystery</div>
+<div class="text-on-surface-variant text-label-sm font-label-sm">Deep character payoff &amp; intricate clues</div>
+</div>
+</button>
+</div>
+</div>
+<!-- Live Diagnostic Readout -->
+<div class="bg-surface-container-lowest p-3 border border-outline-variant/30 rounded-DEFAULT flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>ORACLE STATUS: MATCH LOCK ON 98.4% CONFIDENCE</span>
+<span class="text-primary-container font-bold cursor-blink">UPDATED LIVE █</span>
+</div>
+</div>
+<!-- Right: Dynamic Live Result Preview Card (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container border-2 border-secondary-container rounded-DEFAULT p-6 arcade-shadow-cyan flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<!-- Match Header Badge -->
+<div class="flex items-center justify-between mb-4">
+<span class="holo-stamp text-surface-container-lowest font-label-md text-label-md px-3 py-1 font-bold rounded-DEFAULT tracking-widest uppercase">
+                PERFECT MATCH FOUND
+              </span>
+<span class="font-label-md text-label-md text-primary-container font-bold tracking-widest" id="match-score">
+                98.4% COMPATIBILITY
+              </span>
+</div>
+<!-- Anime Title & Year -->
+<div class="space-y-1 mb-4">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-high text-tertiary-container border border-tertiary-container/40 px-2 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold uppercase" id="match-genre">
+                  EP. 25 // DARK FANTASY // NO FILLER
+                </span>
+<span class="bg-surface-container-high text-secondary border border-secondary-container/40 px-2 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold uppercase">
+                  CERTIFIED GATEWAY
+                </span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface uppercase" id="match-title">
+                ATTACK ON TITAN (SHINGEKI NO KYOJIN)
+              </h3>
+</div>
+<!-- CRT Poster Frame -->
+<div class="relative aspect-video rounded-DEFAULT overflow-hidden border border-outline-variant/80 mb-4 bg-surface-container-lowest group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dramatic cinematic anime still showing a giant colossal titan looming over towering stone walls under an apocalyptic sky with smoke, embers, and tiny scout regiment soldiers flying with grappling cables in vibrant 90s aesthetic." id="match-poster" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB072hJq-85Eh76C59PCl1-pMYvZYcvUdedWCKU_KqOTktgd446bEBJGHVoIqz1cWonwMYh35Ky6MhXXorYgkSiZh4GzjSrf1FVIHSGWTbOUNBph0uzlTvh4_0UQmK-i1MllYxIVb5QZCm6w94VXVT8vbAanazJguwwIvRWvHLXTGMpLfPOspCWGNrbZ8b7q4WjWI-jjy1uuCQaX36rkzw6qHyJiKWKFE6xdqF9B1to"/>
+<div class="crt-overlay absolute inset-0"></div>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 px-2 py-1 rounded-DEFAULT border border-primary-container/40 text-primary-container font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs" data-icon="star">star</span>
+<span id="match-rating">9.1 / 10 (IMDb)</span>
+</div>
+<div class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-2 py-1 rounded-DEFAULT border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
+                CRUNCHYROLL // HULU // NETFLIX
+              </div>
+</div>
+<!-- Why it works for beginners -->
+<div class="space-y-2 mb-4 bg-surface-container-low p-3.5 border border-outline-variant/40 rounded-DEFAULT">
+<div class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="lightbulb">lightbulb</span>
+                WHY IT WORKS FOR BEGINNERS:
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="match-desc">
+                Zero slow exposition. The first 15 minutes deliver one of modern television's most jaw-dropping cliffhangers. Perfect for fans of high-stakes political intrigue, brutal stakes, and relentless cinematic pacing.
+              </p>
+</div>
+</div>
+<!-- Card Foot Actions -->
+<div class="space-y-2 pt-2 border-t border-outline-variant/30">
+<button class="w-full bg-primary-container text-surface-container-lowest font-headline-sm font-bold py-3 rounded-DEFAULT arcade-shadow hover:translate-x-0.5 hover:translate-y-0.5 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+              WHERE TO WATCH (START EPISODE 1)
+            </button>
+<div class="text-center">
+<span class="text-on-surface-variant font-label-sm text-label-sm">COMMUNITY RATING: ZERO CRINGE GUARANTEE ★★★★★</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. THE HALL OF FAME STARTER TIERS -->
+<section class="space-y-8" id="hall-of-fame">
+<div class="border-b border-outline-variant/40 pb-4">
+<div class="flex items-center gap-2 text-primary-container font-label-md text-label-md tracking-widest uppercase">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+          ARCHIVAL CASSETTE VAULT
+        </div>
+<h2 class="text-headline-lg-mobile sm:text-headline-lg font-headline-lg text-on-surface uppercase tracking-tight">
+          THE HALL OF FAME STARTER TIERS
+        </h2>
+<p class="text-on-surface-variant font-body-md text-body-md">
+          Curated cassettes engineered specifically to bypass beginner fatigue. Handpicked for stellar pacing, zero required anime trivia, and instant narrative hooks.
+        </p>
+</div>
+<!-- TIER 1: Universal Entry Hooks -->
+<div class="space-y-4">
+<div class="flex items-center justify-between border-l-4 border-secondary-container pl-3 py-1 bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="font-label-md text-label-md text-secondary-container uppercase tracking-wider font-bold">CATEGORY 01 //</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">THE UNIVERSAL ENTRY HOOKS (INSTANT ADDICTION)</h3>
+</div>
+<span class="hidden sm:inline-block font-label-sm text-label-sm text-tertiary-container bg-surface-container-high px-2 py-0.5 rounded-DEFAULT">
+            HIGH-SPEED CLIFFHANGERS
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card: Death Note -->
+<div class="bg-surface-container-low border border-primary-container/30 rounded-DEFAULT p-4 arcade-shadow flex flex-col justify-between hover:border-primary-container transition-all group">
+<div class="space-y-3">
+<div class="relative aspect-video rounded-DEFAULT overflow-hidden border border-outline-variant/40 bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A moody anime composition of a dark room with a notebook labeled Death Note resting on a desk under the eerie glow of computer screens, with a mysterious supernatural shadow looming behind in midnight purple and neon blue lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUFsVwxHt-8g4A01fX5YyDE0fPQkJzs4_9OE_aoYgvnEESxMz_J0mKfEVaIyuH-ophsQxKYZt7fJzfy1RjmAnNeAQQi6m29rvEcA3CISlKpUa_-y2Xpe7eEBcthlZhq4d39-bFQjad7X8Gytiv8UFv1_qH5NR35dHRb_dB5UxF5JwZYcOxZMZoT7A1j8JzZLCfc43O7qZ_gfggiI2uW0yeCZmtQwABzdG_p-b5l_hD"/>
+<div class="absolute top-2 left-2 bg-secondary-container text-white px-2 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  EP. 37 // PSYCHOLOGICAL
+                </div>
+<div class="absolute top-2 right-2 holo-stamp text-surface-container-lowest px-1.5 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  HOT PICK
+                </div>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary-container transition-colors">
+                  DEATH NOTE
+                </h4>
+<div class="text-tertiary-container font-label-sm text-label-sm font-bold">THE ULTIMATE 1ST EPISODE HOOK</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                A genius high schooler discovers a notebook capable of killing anyone whose name is written in it. Ignites an electrifying cat-and-mouse duel against an eccentric detective.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 mt-4 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-primary-container font-bold">99.1% SUCCESS RATE</span>
+<span class="text-on-surface-variant">NETFLIX // CRUNCHYROLL</span>
+</div>
+</div>
+<!-- Card: Attack on Titan -->
+<div class="bg-surface-container-low border border-primary-container/30 rounded-DEFAULT p-4 arcade-shadow flex flex-col justify-between hover:border-primary-container transition-all group">
+<div class="space-y-3">
+<div class="relative aspect-video rounded-DEFAULT overflow-hidden border border-outline-variant/40 bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An intense anime landscape featuring huge medieval city walls under attack by a towering giant titan with steam billowing from its exposed sinew and muscle fibers in dramatic cinematic light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxhJPp2RE2EjUpyitwCqVJwB_-s02gbVPuxIHLENgzYjtO2eYH6BvsLq3J-O5u_jQWw2IQBBqGuZJXAsj8vMiv0QC2k9LhtwU_4t74CxXeZnHJBN37gEZ_jcixb4iCNSEJRMLeKXJxHm50-mwE07D59XIe0yxJuKBmdQuU4qjCIFaQzrF9Iw3wiFeceYwdGUKfpxH8VvDAX2PATmodX7M8_vhs0F3Z1z0rA4R0rOjY"/>
+<div class="absolute top-2 left-2 bg-secondary-container text-white px-2 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  87 EPS // DARK FANTASY
+                </div>
+<div class="absolute top-2 right-2 holo-stamp text-surface-container-lowest px-1.5 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  ZERO FILLER
+                </div>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary-container transition-colors">
+                  ATTACK ON TITAN
+                </h4>
+<div class="text-tertiary-container font-label-sm text-label-sm font-bold">HIGH STAKES &amp; UNREAL CLIFFHANGERS</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Humanity huddles behind concentric fortress walls to escape gigantic man-eating humanoids. When the outer wall shatters, survival turns into a relentless conspiracy thriller.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 mt-4 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-primary-container font-bold">98.8% SUCCESS RATE</span>
+<span class="text-on-surface-variant">HULU // CRUNCHYROLL</span>
+</div>
+</div>
+<!-- Card: Fullmetal Alchemist: Brotherhood -->
+<div class="bg-surface-container-low border border-primary-container/30 rounded-DEFAULT p-4 arcade-shadow flex flex-col justify-between hover:border-primary-container transition-all group">
+<div class="space-y-3">
+<div class="relative aspect-video rounded-DEFAULT overflow-hidden border border-outline-variant/40 bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Two anime brothers, one with a metallic prosthetic automail arm in red coat and the other a giant metallic suit of armor, performing glowing blue alchemical transmutation on an ornate stone circle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBev_9DN_6uWLQLNOnUDCQVKLkkXkpkTw4MRMmhmt2vnQBg6ShSo4UqYeaWyH4hOCAZTLcm93DjNzKa8wbNoc3Ve70DlhBN-CDgEVi3WMRyXscCe3DY2zP7kSea0UtRPF4duIgOUVq_Jfd-tfYcHMihvdqweOCNmpoc4j1AYWDSo9cMJzk_fz4xAdBGa7wyHenltJ2ikqRb7bAeT2RZsSOrgGcLlhDyigElFbi2_eDN"/>
+<div class="absolute top-2 left-2 bg-secondary-container text-white px-2 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  64 EPS // STEAM-ALCHEMY
+                </div>
+<div class="absolute top-2 right-2 holo-stamp text-surface-container-lowest px-1.5 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  MASTERPIECE
+                </div>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary-container transition-colors">
+                  FULLMETAL ALCHEMIST: BROTHERHOOD
+                </h4>
+<div class="text-tertiary-container font-label-sm text-label-sm font-bold">THE FLAWLESS NARRATIVE BALANCE</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Two brothers pay an unbearable biological price attempting taboo human resurrection. World-class worldbuilding, unforgettable villainy, and zero filler episodes.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 mt-4 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-primary-container font-bold">99.7% SUCCESS RATE</span>
+<span class="text-on-surface-variant">CRUNCHYROLL // PRIME</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TIER 2: The No-Commitment Quick Runs (<26 Episodes) -->
+<div class="space-y-4 pt-4">
+<div class="flex items-center justify-between border-l-4 border-primary-container pl-3 py-1 bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="font-label-md text-label-md text-primary-container uppercase tracking-wider font-bold">CATEGORY 02 //</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">THE NO-COMMITMENT QUICK RUNS (&lt;26 EPISODES)</h3>
+</div>
+<span class="hidden sm:inline-block font-label-sm text-label-sm text-primary-container bg-surface-container-high px-2 py-0.5 rounded-DEFAULT">
+            BINGE IN 1-2 NIGHTS
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card: Cowboy Bebop -->
+<div class="bg-surface-container-low border border-primary-container/30 rounded-DEFAULT p-4 arcade-shadow flex flex-col justify-between hover:border-primary-container transition-all group">
+<div class="space-y-3">
+<div class="relative aspect-video rounded-DEFAULT overflow-hidden border border-outline-variant/40 bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cool 90s anime bounty hunter with unruly dark hair and a slim navy blue suit smoking a cigarette in a dimly lit neon jazz bar, framed against venetian blind shadows and saxophone silhouettes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOZ-tiuWmSZDDfTspglHFdlB_MUWhVYqEh5pKGiUuFYTHzywCwWyLqqMxBgMdQgCn5GCLIhgP0IRJCQPdad_7oi7w6poYWA-ZHRqOzGICp-QhEDAJnyWJ2Yu5SPBexHYiHOAZm3JNSe5-fkxHnaMGmyB7yjXOBm0gzRNTvoelr4fOgD08zYA5aAOuklhqVxyG5sw-9e6Ckq_J4Ze9ELp1u1VjzGgUbILQ48jlFkS61"/>
+<div class="absolute top-2 left-2 bg-secondary-container text-white px-2 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  26 EPS // NEO-NOIR SCI-FI
+                </div>
+<div class="absolute top-2 right-2 holo-stamp text-surface-container-lowest px-1.5 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  90s CLASSIC
+                </div>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary-container transition-colors">
+                  COWBOY BEBOP
+                </h4>
+<div class="text-tertiary-container font-label-sm text-label-sm font-bold">90S JAZZ, NEO-NOIR, EPISODIC COOL</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Bounty hunters drift across the solar system aboard the spaceship Bebop. Incredible legendary jazz soundtrack by Yoko Kanno with unmatched cinematic direction.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 mt-4 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-primary-container font-bold">97.9% SUCCESS RATE</span>
+<span class="text-on-surface-variant">NETFLIX // HULU</span>
+</div>
+</div>
+<!-- Card: Cyberpunk: Edgerunners -->
+<div class="bg-surface-container-low border border-primary-container/30 rounded-DEFAULT p-4 arcade-shadow flex flex-col justify-between hover:border-primary-container transition-all group">
+<div class="space-y-3">
+<div class="relative aspect-video rounded-DEFAULT overflow-hidden border border-outline-variant/40 bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A vivid hyper-saturated scene of Night City featuring glowing yellow holographic neon street signs, futuristic speeders with light trails, and a young cybernetically augmented hero in high-contrast neon yellow jacket." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrBESK101iPPvGKp6u9GDdcbnKObyOLOI7SdfVlTaZc5kaEvSUPPRB0Y3DEnLwMX976JcMxM1JJzZA2VDX4Gi_hLGoS6t18J4Jzsc6EaiKrODFOI2vKWBPwnyXKrG_otaWLtO3P086bOLPHWNug5rbJfuZ-7IxQzuJzBKPG4LUniepNpkteMlYhHItzOQx9_f9vYcb2bQS6zkiQ1ubN2QbNIwDzeaPsHhyJLGhpaxb"/>
+<div class="absolute top-2 left-2 bg-secondary-container text-white px-2 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  10 EPS // CYBERPUNK
+                </div>
+<div class="absolute top-2 right-2 holo-stamp text-surface-container-lowest px-1.5 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  BINGE IN 1 NIGHT
+                </div>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary-container transition-colors">
+                  CYBERPUNK: EDGERUNNERS
+                </h4>
+<div class="text-tertiary-container font-label-sm text-label-sm font-bold">10 EPISODES OF PURE ADRENALINE</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Studio TRIGGER's masterclass in kinetic violence and tragic romance set in Mike Pondsmith's Night City. Fast, gorgeous, and emotionally devastating.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 mt-4 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-primary-container font-bold">96.5% SUCCESS RATE</span>
+<span class="text-on-surface-variant">NETFLIX EXCLUSIVE</span>
+</div>
+</div>
+<!-- Card: Demon Slayer -->
+<div class="bg-surface-container-low border border-primary-container/30 rounded-DEFAULT p-4 arcade-shadow flex flex-col justify-between hover:border-primary-container transition-all group">
+<div class="space-y-3">
+<div class="relative aspect-video rounded-DEFAULT overflow-hidden border border-outline-variant/40 bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A spectacular stylized Japanese anime sword clash featuring fluid water breathing waves in traditional ukiyo-e woodblock illustration style swirling around a katana blade in vibrant cyan and white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAma8dlL2G8xKoD37y3dnoF5Ix-H8H9MpuJH1JBSBXl7tPqT3rG00iEyAUq5uUCoyfCUxWQB0BIZWufC3DosRw1ZW0FmP2ZLXMHIHrdsVLafyNVDMgseNqkfvRBxdmSl5nP-DzOtGd_CDU-UpOj8H88_YCDZRCctlZzMiL5TMn8Pauos4EUCyVIQeF-TYHGyY8HoNQco-rHbS4pMPEQkapyeV_VuOjR0cqCv0bGz4k8"/>
+<div class="absolute top-2 left-2 bg-secondary-container text-white px-2 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  26 EPS (S1) // HISTORICAL ACTION
+                </div>
+<div class="absolute top-2 right-2 holo-stamp text-surface-container-lowest px-1.5 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                  VISUAL PEAK
+                </div>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary-container transition-colors">
+                  DEMON SLAYER (KIMETSU NO YAIBA)
+                </h4>
+<div class="text-tertiary-container font-label-sm text-label-sm font-bold">VISUAL SPECTACLE, ACCESSIBLE SHONEN</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                A kindhearted boy embarks on a perilous quest to cure his demonized sister. Ufotable's animation benchmarks set new worldwide industry standards.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 mt-4 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-primary-container font-bold">98.1% SUCCESS RATE</span>
+<span class="text-on-surface-variant">CRUNCHYROLL // NETFLIX</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TIER 3 & 4: Split Bento Pods -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4">
+<!-- Category 3: Heartwarming & Cozy Intros -->
+<div class="space-y-4">
+<div class="flex items-center justify-between border-l-4 border-tertiary-container pl-3 py-1 bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-tertiary-container uppercase tracking-wider font-bold">CATEGORY 03 //</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">HEARTWARMING &amp; COZY INTROS</h3>
+</div>
+</div>
+<div class="space-y-3">
+<!-- Item 1: Spy x Family -->
+<div class="bg-surface-container-low border border-outline-variant/50 p-4 rounded-DEFAULT flex items-center justify-between hover:border-secondary-container transition-all">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">SPY X FAMILY</span>
+<span class="text-label-sm font-label-sm bg-surface-container-high px-2 py-0.5 rounded-DEFAULT text-secondary font-bold">HILARIOUS &amp; WHOLESOME</span>
+</div>
+<p class="text-on-surface-variant text-body-sm font-body-sm max-w-md">
+                  A spy, an assassin, and a telepathic orphan form a fake family without knowing each other's secrets. Pure wholesome comedy.
+                </p>
+</div>
+<div class="text-right">
+<div class="text-primary-container font-label-md text-label-md font-bold">25 EPS</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">CRUNCHYROLL</div>
+</div>
+</div>
+<!-- Item 2: Frieren -->
+<div class="bg-surface-container-low border border-outline-variant/50 p-4 rounded-DEFAULT flex items-center justify-between hover:border-secondary-container transition-all">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">FRIEREN: BEYOND JOURNEY'S END</span>
+<span class="text-label-sm font-label-sm bg-surface-container-high px-2 py-0.5 rounded-DEFAULT text-tertiary-container font-bold">GORGEOUS PACING</span>
+</div>
+<p class="text-on-surface-variant text-body-sm font-body-sm max-w-md">
+                  An immortal elf mage retraces her steps after the demon king was already defeated. Touching meditation on memory and mortality.
+                </p>
+</div>
+<div class="text-right">
+<div class="text-primary-container font-label-md text-label-md font-bold">28 EPS</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">CRUNCHYROLL</div>
+</div>
+</div>
+<!-- Item 3: Haikyu!! -->
+<div class="bg-surface-container-low border border-outline-variant/50 p-4 rounded-DEFAULT flex items-center justify-between hover:border-secondary-container transition-all">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">HAIKYU!!</span>
+<span class="text-label-sm font-label-sm bg-surface-container-high px-2 py-0.5 rounded-DEFAULT text-primary font-bold">INFECTIOUS HYPE</span>
+</div>
+<p class="text-on-surface-variant text-body-sm font-body-sm max-w-md">
+                  Even if you care nothing for volleyball, this will have you cheering on your feet in five minutes.
+                </p>
+</div>
+<div class="text-right">
+<div class="text-primary-container font-label-md text-label-md font-bold">25 EPS (S1)</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">NETFLIX</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Category 4: The Masterpiece Movies -->
+<div class="space-y-4">
+<div class="flex items-center justify-between border-l-4 border-secondary-container pl-3 py-1 bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-secondary-container uppercase tracking-wider font-bold">CATEGORY 04 //</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">THE MASTERPIECE MOVIES (NO TV REQUIRED)</h3>
+</div>
+</div>
+<div class="space-y-3">
+<!-- Movie 1: Spirited Away -->
+<div class="bg-surface-container-low border border-outline-variant/50 p-4 rounded-DEFAULT flex items-center justify-between hover:border-primary-container transition-all">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">SPIRITED AWAY (2001)</span>
+<span class="text-label-sm font-label-sm bg-surface-container-high px-2 py-0.5 rounded-DEFAULT text-secondary font-bold">OSCAR WINNER</span>
+</div>
+<p class="text-on-surface-variant text-body-sm font-body-sm max-w-md">
+                  Hayao Miyazaki's hand-drawn wonderland bathhouse for spirits. The gold standard for modern cinematic fairy tales.
+                </p>
+</div>
+<div class="text-right">
+<div class="text-primary-container font-label-md text-label-md font-bold">125 MIN</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">MAX // HBO</div>
+</div>
+</div>
+<!-- Movie 2: Your Name -->
+<div class="bg-surface-container-low border border-outline-variant/50 p-4 rounded-DEFAULT flex items-center justify-between hover:border-primary-container transition-all">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">YOUR NAME (2016)</span>
+<span class="text-label-sm font-label-sm bg-surface-container-high px-2 py-0.5 rounded-DEFAULT text-tertiary-container font-bold">SCI-FI ROMANCE</span>
+</div>
+<p class="text-on-surface-variant text-body-sm font-body-sm max-w-md">
+                  Makoto Shinkai's breathtaking visual spectacle about two strangers swapping bodies across space and time.
+                </p>
+</div>
+<div class="text-right">
+<div class="text-primary-container font-label-md text-label-md font-bold">106 MIN</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">RENT / STREAM</div>
+</div>
+</div>
+<!-- Movie 3: Akira -->
+<div class="bg-surface-container-low border border-outline-variant/50 p-4 rounded-DEFAULT flex items-center justify-between hover:border-primary-container transition-all">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">AKIRA (1988)</span>
+<span class="text-label-sm font-label-sm bg-surface-container-high px-2 py-0.5 rounded-DEFAULT text-primary-container font-bold">CYBERPUNK ORIGIN</span>
+</div>
+<p class="text-on-surface-variant text-body-sm font-body-sm max-w-md">
+                  The legendary, hand-animated 24fps cyberpunk benchmark that shook Western cinema and influenced The Matrix.
+                </p>
+</div>
+<div class="text-right">
+<div class="text-primary-container font-label-md text-label-md font-bold">124 MIN</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">HULU // CRUNCHYROLL</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. INTERACTIVE FEATURE 2: ARCADE CASSETTE ROULETTE -->
+<section class="bg-surface-container-lowest border-2 border-primary-container rounded-DEFAULT p-6 sm:p-10 arcade-shadow relative overflow-hidden" id="roulette">
+<!-- Background CRT Scanline -->
+<div class="crt-overlay absolute inset-0 pointer-events-none"></div>
+<div class="relative z-10 max-w-4xl mx-auto space-y-8">
+<!-- Roulette Header -->
+<div class="text-center space-y-2">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-DEFAULT bg-secondary-container/20 border border-secondary-container text-secondary font-label-sm text-label-sm tracking-widest uppercase">
+<span class="material-symbols-outlined text-sm" data-icon="casino">casino</span>
+            GAMIFIED RANDOMIZER UNIT // SYSTEM 99
+          </div>
+<h2 class="text-headline-lg-mobile sm:text-headline-lg font-headline-lg text-primary-container tracking-tight uppercase drop-shadow-[0_0_10px_rgba(0,240,255,0.6)]">
+            ARCADE CASSETTE ROULETTE
+          </h2>
+<p class="text-on-surface-variant font-body-md text-body-md">
+            Paralyzed by infinite options? Lock your vibe filters and hit the big arcade button. We guarantee a beginner-tested cult favorite every single spin.
+          </p>
+</div>
+<!-- Filter Toggles -->
+<div class="flex flex-wrap items-center justify-center gap-3">
+<button class="filter-chip px-3 py-1.5 rounded-DEFAULT border border-secondary-container bg-secondary-container text-white font-label-sm text-label-sm font-bold tracking-wider transition-all" onclick="toggleFilter(this)">
+            * SHORT &amp; FINISHED
+          </button>
+<button class="filter-chip px-3 py-1.5 rounded-DEFAULT border border-outline-variant bg-surface-container text-on-surface-variant hover:border-primary-container font-label-sm text-label-sm tracking-wider transition-all" onclick="toggleFilter(this)">
+            HIGH ACTION
+          </button>
+<button class="filter-chip px-3 py-1.5 rounded-DEFAULT border border-outline-variant bg-surface-container text-on-surface-variant hover:border-primary-container font-label-sm text-label-sm tracking-wider transition-all" onclick="toggleFilter(this)">
+            MIND GAMES
+          </button>
+<button class="filter-chip px-3 py-1.5 rounded-DEFAULT border border-outline-variant bg-surface-container text-on-surface-variant hover:border-primary-container font-label-sm text-label-sm tracking-wider transition-all" onclick="toggleFilter(this)">
+            CRY YOUR EYES OUT
+          </button>
+<button class="filter-chip px-3 py-1.5 rounded-DEFAULT border border-outline-variant bg-surface-container text-on-surface-variant hover:border-primary-container font-label-sm text-label-sm tracking-wider transition-all" onclick="toggleFilter(this)">
+            ENGLISH DUB APPROVED
+          </button>
+</div>
+<!-- Roulette Machine Display Screen -->
+<div class="bg-surface-container-low border border-primary-container/40 rounded-DEFAULT p-6 relative">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<!-- Cassette Artwork -->
+<div class="md:col-span-4 relative aspect-[4/3] rounded-DEFAULT overflow-hidden border border-outline-variant/60 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="An eye-popping anime scene of a stylish futuristic detective in a dystopian neo-noir city looking out over a neon rain-drenched skyline with glowing cybernetic augments and dark atmospheric reflections." id="roulette-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2KKY3UKYZCSLdTli9F3_XnByRqgoIoEzMC6bK0V8JcWdvzG49cg2gr6OBgYmRhGy9ji8f48w0dLQu_x40p3jnuVDKh0PRu01zRu9OpdcDru9jl6Qiy-FpOpZwt34GzGz-73fsDqkf-hAxOqSlzIQrk7CY4kPjFFBCi6dZBeQfsJUM7zsYxs7eayWGIT6VK9kUtgrY9fahaFF9XfzX2Vzpbl7-E2Dis2rt4bMbo-36"/>
+<div class="crt-overlay absolute inset-0"></div>
+<div class="absolute top-2 left-2 bg-secondary-container text-white px-2 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold" id="roulette-tag">
+                CASSETTE #042
+              </div>
+</div>
+<!-- Cassette Data & Beginner Warning Level -->
+<div class="md:col-span-8 space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-tertiary-container font-label-sm text-label-sm uppercase tracking-widest font-bold" id="roulette-genre">
+                  SCI-FI // NOIR PSYCHOLOGICAL THRILLER
+                </span>
+<span class="text-primary-container font-label-sm text-label-sm font-bold">
+                  STATUS: VERIFIED
+                </span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface uppercase" id="roulette-title">
+                PSYCHO-PASS (SEASON 1)
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant" id="roulette-synopsis">
+                In a future where minds are scanned for criminal intent before crimes occur, rookie inspector Akane Tsunemori questions the authoritarian Sybil System alongside a brooding enforcer.
+              </p>
+<!-- Beginner Warning Level / Stats Meters -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 bg-surface-container-lowest p-3 rounded-DEFAULT border border-outline-variant/40 font-label-sm text-label-sm">
+<div>
+<div class="text-on-surface-variant">WEIRDNESS FACTOR</div>
+<div class="text-secondary font-bold text-sm" id="roulette-weirdness">0 / 10 (VERY GROUNDED)</div>
+</div>
+<div>
+<div class="text-on-surface-variant">PACING MULTIPLIER</div>
+<div class="text-primary-container font-bold text-sm" id="roulette-pacing">10 / 10 (RELENTLESS)</div>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<div class="text-on-surface-variant">LENGTH COMMITMENT</div>
+<div class="text-tertiary-container font-bold text-sm" id="roulette-length">22 EPISODES</div>
+</div>
+</div>
+</div>
+</div>
+<!-- The Big Arcade Button -->
+<div class="mt-8 text-center">
+<button class="inline-flex items-center gap-3 bg-secondary-container text-white font-headline-sm font-bold px-8 py-4 rounded-DEFAULT shadow-[4px_4px_0px_#00f0ff] hover:translate-x-1 hover:translate-y-1 active:scale-95 transition-all uppercase tracking-widest" onclick="spinRoulette()">
+<span class="material-symbols-outlined text-2xl" data-icon="autorenew">autorenew</span>
+              SPIN FOR A RANDOM MASTERPIECE
+            </button>
+<div class="mt-2 text-on-surface-variant font-label-sm text-label-sm">
+              CLICK TO EXECUTE 1999 RNG SEED
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. THE BEGINNER'S SURVIVAL GUIDE -->
+<section class="space-y-6" id="guide">
+<div class="border-b border-outline-variant/40 pb-4">
+<div class="flex items-center gap-2 text-primary-container font-label-md text-label-md tracking-widest uppercase">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+          FIELD TRANSMISSION MANUAL
+        </div>
+<h2 class="text-headline-lg-mobile sm:text-headline-lg font-headline-lg text-on-surface uppercase tracking-tight">
+          THE BEGINNER'S SURVIVAL GUIDE: 4 GOLDEN RULES
+        </h2>
+<p class="text-on-surface-variant font-body-md text-body-md">
+          Avoid the common traps that cause newcomers to abandon the medium. Memorize these four tenets before pressing play.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Rule 1 -->
+<div class="bg-surface-container-low border border-primary-container/30 p-5 rounded-DEFAULT arcade-shadow space-y-3 flex flex-col justify-between">
+<div class="space-y-2">
+<div class="w-8 h-8 rounded-DEFAULT bg-primary-container text-surface-container-lowest font-headline-sm font-bold flex items-center justify-center">
+              01
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">
+              SUB VS DUB: DROP THE GUILT
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The elitist debate is over. Modern English dubs have incredible voice talent and sound mixing. If reading subtitles prevents you from relaxing, switch to English immediately!
+            </p>
+</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold pt-2 border-t border-outline-variant/20">
+            VERDICT: WATCH HOW YOU ENJOY IT
+          </div>
+</div>
+<!-- Rule 2 -->
+<div class="bg-surface-container-low border border-primary-container/30 p-5 rounded-DEFAULT arcade-shadow space-y-3 flex flex-col justify-between">
+<div class="space-y-2">
+<div class="w-8 h-8 rounded-DEFAULT bg-secondary-container text-white font-headline-sm font-bold flex items-center justify-center">
+              02
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">
+              THE 3-EPISODE RULE
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Anime pacing often uses Episode 1 for premise, Episode 2 for mechanics, and Episode 3 for the explosive turning point. Give any show three full episodes before dropping it.
+            </p>
+</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold pt-2 border-t border-outline-variant/20">
+            VERDICT: 60 MIN TRIAL PERIOD
+          </div>
+</div>
+<!-- Rule 3 -->
+<div class="bg-surface-container-low border border-primary-container/30 p-5 rounded-DEFAULT arcade-shadow space-y-3 flex flex-col justify-between">
+<div class="space-y-2">
+<div class="w-8 h-8 rounded-DEFAULT bg-tertiary-container text-surface-container-lowest font-headline-sm font-bold flex items-center justify-center">
+              03
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">
+              BEWARE THE 800-EP TRAP
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Yes, One Piece, Naruto, and Bleach are historic. But starting a 1,100-episode mountain as a novice induces instant burnout. Finish three 12-to-24 episode runs first.
+            </p>
+</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold pt-2 border-t border-outline-variant/20">
+            VERDICT: RUN QUICK SPRINTS FIRST
+          </div>
+</div>
+<!-- Rule 4 -->
+<div class="bg-surface-container-low border border-primary-container/30 p-5 rounded-DEFAULT arcade-shadow space-y-3 flex flex-col justify-between">
+<div class="space-y-2">
+<div class="w-8 h-8 rounded-DEFAULT bg-surface-container-high border border-outline text-primary-container font-headline-sm font-bold flex items-center justify-center">
+              04
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">
+              FILLER LISTS ARE YOUR FRIEND
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Older weekly anime created uncanonical episodes to let manga catch up. When venturing into longer shows, look up AnimeFillerList.com and skip them guilt-free.
+            </p>
+</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold pt-2 border-t border-outline-variant/20">
+            VERDICT: 100% CANON PURITY
+          </div>
+</div>
+</div>
+<!-- Community Callout Box -->
+<div class="bg-surface-container p-6 rounded-DEFAULT border border-secondary-container/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary-container" data-icon="forum">forum</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase">STILL FEEL LOST? ASK THE OPERATOR</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Our community IRC channel and Discord moderators will hand-craft recommendations based on your favorite books or video games.</p>
+</div>
+</div>
+<button class="shrink-0 bg-secondary-container text-white px-5 py-2.5 rounded-DEFAULT font-label-md text-label-md tracking-wider uppercase font-bold hover:bg-secondary-container/90 transition-all">
+          JOIN OPERATOR DISCORD
+        </button>
+</div>
+</section>
+</main>
+<!-- FOOTER (Shared Component Anchor) -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/40 mt-auto w-full">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-6 py-6 max-w-full mx-auto gap-4">
+<!-- Footer Copyright Text -->
+<div class="flex flex-col sm:flex-row items-center gap-3">
+<span class="text-headline-sm font-headline-sm uppercase text-primary-container">
+          NEO-TOKYO.99
+        </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm text-center sm:text-left">
+          © 1999 NEO-TOKYO SIGNAL CORP // BROADCAST ARCHIVE REEL #404. ALL CHANNELS MONITORED.
+        </span>
+</div>
+<!-- Links Array -->
+<div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary-container hover:underline transition-all" href="#">CRT PRESETS</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary-container hover:underline transition-all" href="#">TERMINAL LOGS</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary-container hover:underline transition-all" href="#">EMERGENCY BROADCAST</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary-container hover:underline transition-all" href="#">SIGNAL SPECS</a>
+<a class="text-primary-container font-label-sm text-label-sm hover:text-primary-container hover:underline transition-all font-bold" href="#">CONTACT OPERATOR</a>
+</div>
+</div>
+</footer>
+<!-- BOTTOM HUD DOCK (Mobile Navigation Bar from Shared Components) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex md:hidden justify-around items-center px-3 py-2 bg-surface-container-lowest border-t border-primary-container/30 shadow-[0_-4px_0_0_#ff4a8d]">
+<!-- Item 1: RADAR -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 font-label-sm text-label-sm hover:text-primary hover:bg-surface-container-high transition-all" href="#hero">
+<span class="material-symbols-outlined text-xl" data-icon="radar">radar</span>
+<span>RADAR</span>
+</a>
+<!-- Item 2: MATCHMAKER (Active for quiz screen) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-DEFAULT px-3 py-1 shadow-[2px_2px_0px_#00f0ff] font-label-sm text-label-sm font-bold" href="#quiz">
+<span class="material-symbols-outlined text-xl" data-icon="psychology">psychology</span>
+<span>MATCHMAKER</span>
+</a>
+<!-- Item 3: VAULT -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 font-label-sm text-label-sm hover:text-primary hover:bg-surface-container-high transition-all" href="#hall-of-fame">
+<span class="material-symbols-outlined text-xl" data-icon="movie">movie</span>
+<span>VAULT</span>
+</a>
+<!-- Item 4: ROULETTE -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 font-label-sm text-label-sm hover:text-primary hover:bg-surface-container-high transition-all" href="#roulette">
+<span class="material-symbols-outlined text-xl" data-icon="casino">casino</span>
+<span>ROULETTE</span>
+</a>
+<!-- Item 5: SYSTEM -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1 font-label-sm text-label-sm hover:text-primary hover:bg-surface-container-high transition-all" href="#guide">
+<span class="material-symbols-outlined text-xl" data-icon="tune">tune</span>
+<span>SYSTEM</span>
+</a>
+</nav>
+<!-- Interactive Script for Quiz and Arcade Roulette -->
+<script>
+    // Quiz state representation
+    const recommendations = {
+      got: {
+        title: "ATTACK ON TITAN (SHINGEKI NO KYOJIN)",
+        score: "99.2% COMPATIBILITY",
+        genre: "EP. 25 // DARK FANTASY // NO FILLER",
+        desc: "Zero slow exposition. The first 15 minutes deliver one of modern television's most jaw-dropping cliffhangers. Perfect for fans of high-stakes political intrigue, brutal stakes, and relentless cinematic pacing.",
+        rating: "9.1 / 10 (IMDb)"
+      },
+      crime: {
+        title: "DEATH NOTE",
+        score: "98.8% COMPATIBILITY",
+        genre: "EP. 37 // PSYCHOLOGICAL THRILLER",
+        desc: "A battle of wits where every step feels like a high-tension chess match. Light Yagami and L will keep you on the edge of your seat with zero downtime.",
+        rating: "9.0 / 10 (IMDb)"
+      },
+      cyberpunk: {
+        title: "CYBERPUNK: EDGERUNNERS",
+        score: "97.9% COMPATIBILITY",
+        genre: "EP. 10 // NEON SCI-FI // COMPLETED",
+        desc: "10 episodes of hyper-kinetic visual brilliance and emotional resonance. If you love Blade Runner, The Matrix, or synthwave aesthetic, start right here.",
+        rating: "8.3 / 10 (IMDb)"
+      },
+      marvel: {
+        title: "JUJUTSU KAISEN",
+        score: "98.5% COMPATIBILITY",
+        genre: "EP. 24 // SUPERNATURAL SHONEN",
+        desc: "Incredible combat choreography, supernatural curse lore, and charismatic characters with Marvel-level entertainment value and flawless pacing.",
+        rating: "8.6 / 10 (IMDb)"
+      },
+      cozy: {
+        title: "SPY X FAMILY",
+        score: "99.4% COMPATIBILITY",
+        genre: "EP. 25 // WHOLESOME COMEDY",
+        desc: "Guaranteed smile on your face from the first scene. A fake family built on secrets, telepathy, and genuine heart without any stressful angst.",
+        rating: "8.4 / 10 (IMDb)"
+      }
+    };
+
+    function selectBinge(button, type) {
+      document.querySelectorAll('#step1-options .quiz-btn').forEach(btn => {
+        btn.classList.remove('border-secondary-container', 'bg-secondary-container/10');
+        btn.classList.add('border-outline-variant', 'bg-surface-container');
+        const textDiv = btn.querySelector('.font-label-md');
+        if (textDiv) {
+          textDiv.classList.remove('text-secondary', 'font-bold');
+          textDiv.classList.add('text-on-surface');
+          textDiv.textContent = textDiv.textContent.replace('* ', '');
+        }
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.classList.add('opacity-0');
+          icon.textContent = 'radio_button_unchecked';
+        }
+      });
+
+      button.classList.add('border-secondary-container', 'bg-secondary-container/10');
+      button.classList.remove('border-outline-variant', 'bg-surface-container');
+      const textDiv = button.querySelector('.font-label-md');
+      if (textDiv) {
+        textDiv.classList.add('text-secondary', 'font-bold');
+        if (!textDiv.textContent.startsWith('*')) {
+          textDiv.textContent = '* ' + textDiv.textContent;
+        }
+      }
+      const icon = button.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.classList.remove('opacity-0');
+        icon.textContent = 'check_circle';
+      }
+
+      // Update Result Preview
+      const data = recommendations[type] || recommendations.got;
+      document.getElementById('match-title').textContent = data.title;
+      document.getElementById('match-score').textContent = data.score;
+      document.getElementById('match-genre').textContent = data.genre;
+      document.getElementById('match-desc').textContent = data.desc;
+      document.getElementById('match-rating').textContent = data.rating;
+    }
+
+    function selectCommitment(button, type) {
+      document.querySelectorAll('#step2-options .commit-btn').forEach(btn => {
+        btn.classList.remove('border-secondary-container', 'bg-secondary-container/10');
+        btn.classList.add('border-outline-variant', 'bg-surface-container');
+        const label = btn.querySelector('.font-label-md');
+        if (label) label.textContent = label.textContent.replace('* ', '');
+      });
+      button.classList.add('border-secondary-container', 'bg-secondary-container/10');
+      button.classList.remove('border-outline-variant', 'bg-surface-container');
+      const label = button.querySelector('.font-label-md');
+      if (label && !label.textContent.startsWith('*')) {
+        label.textContent = '* ' + label.textContent;
+      }
+    }
+
+    function selectPacing(button, type) {
+      document.querySelectorAll('#step3-options .pacing-btn').forEach(btn => {
+        btn.classList.remove('border-secondary-container', 'bg-secondary-container/10');
+        btn.classList.add('border-outline-variant', 'bg-surface-container');
+        const label = btn.querySelector('.font-label-md');
+        if (label) {
+          label.classList.remove('text-secondary', 'font-bold');
+          label.classList.add('text-on-surface');
+          label.textContent = label.textContent.replace('* ', '');
+        }
+      });
+      button.classList.add('border-secondary-container', 'bg-secondary-container/10');
+      button.classList.remove('border-outline-variant', 'bg-surface-container');
+      const label = button.querySelector('.font-label-md');
+      if (label) {
+        label.classList.add('text-secondary', 'font-bold');
+        if (!label.textContent.startsWith('*')) {
+          label.textContent = '* ' + label.textContent;
+        }
+      }
+    }
+
+    // Roulette Randomizer
+    const roulettePool = [
+      {
+        title: "PSYCHO-PASS (SEASON 1)",
+        tag: "CASSETTE #042",
+        genre: "SCI-FI // NOIR PSYCHOLOGICAL THRILLER",
+        synopsis: "In a future where minds are scanned for criminal intent before crimes occur, rookie inspector Akane Tsunemori questions the authoritarian Sybil System alongside a brooding enforcer.",
+        weirdness: "0 / 10 (VERY GROUNDED)",
+        pacing: "10 / 10 (RELENTLESS)",
+        length: "22 EPISODES"
+      },
+      {
+        title: "VIVY: FLUORITE EYE'S SONG",
+        tag: "CASSETTE #088",
+        genre: "TIME TRAVEL // SCI-FI ACTION",
+        synopsis: "The world's first autonomous AI idol singer must team up with an enigmatic AI from 100 years in the future to stop an imminent robotic apocalypse.",
+        weirdness: "1 / 10 (ACCESSIBLE)",
+        pacing: "9 / 10 (HIGH SPEED)",
+        length: "13 EPISODES"
+      },
+      {
+        title: "ERASED (BOKUDAKE GA INAI MACHI)",
+        tag: "CASSETTE #019",
+        genre: "CRIME MYSTERY // TIME REWIND",
+        synopsis: "A struggling 29-year-old with the ability to rewind seconds before a tragedy is suddenly sent back 18 years to his childhood to prevent a serial kidnapping.",
+        weirdness: "0 / 10 (ZERO ANIME CRINGE)",
+        pacing: "10 / 10 (PEAK BINGE)",
+        length: "12 EPISODES"
+      },
+      {
+        title: "MOB PSYCHO 100",
+        tag: "CASSETTE #103",
+        genre: "SUPERNATURAL // COMEDY // EMOTIONAL",
+        synopsis: "An immensely powerful esper teenager just wants to fit in, work out, and confess to his crush, all while con-man mentor Reigen guides his heart.",
+        weirdness: "3 / 10 (QUIRKY ART STYLE)",
+        pacing: "9 / 10 (DYNAMIC)",
+        length: "25 EPS (2 SEASONS)"
+      }
+    ];
+
+    let currentRouletteIndex = 0;
+
+    function spinRoulette() {
+      currentRouletteIndex = (currentRouletteIndex + 1) % roulettePool.length;
+      const item = roulettePool[currentRouletteIndex];
+
+      const titleEl = document.getElementById('roulette-title');
+      const tagEl = document.getElementById('roulette-tag');
+      const genreEl = document.getElementById('roulette-genre');
+      const synEl = document.getElementById('roulette-synopsis');
+      const weirdEl = document.getElementById('roulette-weirdness');
+      const paceEl = document.getElementById('roulette-pacing');
+      const lenEl = document.getElementById('roulette-length');
+
+      // Visual spin flash effect
+      titleEl.classList.add('opacity-30');
+      setTimeout(() => {
+        titleEl.textContent = item.title;
+        tagEl.textContent = item.tag;
+        genreEl.textContent = item.genre;
+        synEl.textContent = item.synopsis;
+        weirdEl.textContent = item.weirdness;
+        paceEl.textContent = item.pacing;
+        lenEl.textContent = item.length;
+        titleEl.classList.remove('opacity-30');
+      }, 150);
+    }
+
+    function toggleFilter(btn) {
+      if (btn.classList.contains('bg-secondary-container')) {
+        btn.classList.remove('bg-secondary-container', 'text-white', 'border-secondary-container', 'font-bold');
+        btn.classList.add('bg-surface-container', 'text-on-surface-variant', 'border-outline-variant');
+        btn.textContent = btn.textContent.replace('* ', '');
+      } else {
+        btn.classList.add('bg-secondary-container', 'text-white', 'border-secondary-container', 'font-bold');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant', 'border-outline-variant');
+        if (!btn.textContent.includes('*')) {
+          btn.textContent = '* ' + btn.textContent.trim();
+        }
+      }
+    }
+  </script>
+</body></html>
