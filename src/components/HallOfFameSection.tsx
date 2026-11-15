@@ -46,6 +46,7 @@ export function HallOfFameSection({
     );
   const cozy = filteredCatalog.filter((i) => i.category === 'cozy');
   const movies = filteredCatalog.filter((i) => i.category === 'movie');
+  const legends = filteredCatalog.filter((i) => i.category === 'legends');
 
   const showTier = (cat: VaultCategory) => selectedTier === 'all' || selectedTier === cat;
 
@@ -74,6 +75,7 @@ export function HallOfFameSection({
             { id: 'quick', label: '02 QUICK RUNS' },
             { id: 'cozy', label: '03 COZY' },
             { id: 'movie', label: '04 MOVIES' },
+            { id: 'legends', label: '05 LEGENDS' },
           ].map((tab) => {
             const active = selectedTier === tab.id;
             return (
@@ -252,6 +254,43 @@ export function HallOfFameSection({
               </div>
             </div>
           )}
+        </div>
+      )}
+
+      {/* TIER 5: All-Time Greats & Shonen Legends */}
+      {showTier('legends') && legends.length > 0 && (
+        <div className="space-y-4 pt-2">
+          <div className="flex items-center justify-between border-l-4 border-tertiary-container pl-3 py-1 bg-surface-container-low">
+            <div className="flex items-center gap-3">
+              <span className="font-label-md text-label-md text-tertiary-container uppercase tracking-wider font-bold">
+                CATEGORY 05 //
+              </span>
+              <h3 className="font-headline-sm text-headline-sm text-on-surface uppercase">
+                ALL-TIME GREATS &amp; ICONIC LEGENDS (TITANS OF THE MEDIUM)
+              </h3>
+            </div>
+            <span className="hidden sm:inline-block font-label-sm text-label-sm text-tertiary-container bg-surface-container-high px-2 py-0.5 rounded-DEFAULT">
+              HISTORIC MASTERPIECES
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {legends.map((anime) => (
+              <PosterCassetteCard
+                key={anime.id}
+                anime={anime}
+                isSaved={watchlistIds.includes(anime.id)}
+                onToggleSave={() => {
+                  onPlaySound('click');
+                  onToggleWatchlist(anime.id);
+                }}
+                onInspect={() => {
+                  onPlaySound('lock');
+                  onSelectAnime(anime);
+                }}
+              />
+            ))}
+          </div>
         </div>
       )}
     </section>

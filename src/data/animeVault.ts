@@ -1,7 +1,15 @@
+import narutoImg from '../assets/images/anime_naruto_shinobi_1794727286836.jpg';
+import onePieceImg from '../assets/images/anime_one_piece_voyage_1794727288580.jpg';
+import dbzImg from '../assets/images/anime_dbz_ki_arena_1794727289897.jpg';
+import bleachImg from '../assets/images/anime_bleach_soul_blade_1794727289721.jpg';
+import yuYuHakushoImg from '../assets/images/anime_yuyuhakusho_spirit_1794727290398.jpg';
+import ippoImg from '../assets/images/anime_ippo_boxing_ring_1794727290201.jpg';
+import conanImg from '../assets/images/anime_conan_mystery_night_1794727291582.jpg';
+
 export type BingeType = 'got' | 'crime' | 'cyberpunk' | 'marvel' | 'cozy';
 export type CommitmentType = 'movie' | 'season' | 'epic';
 export type PacingType = 'fast' | 'slow';
-export type VaultCategory = 'universal' | 'quick' | 'cozy' | 'movie';
+export type VaultCategory = 'universal' | 'quick' | 'cozy' | 'movie' | 'legends';
 export type RouletteFilter =
   | 'SHORT & FINISHED'
   | 'HIGH ACTION'
@@ -642,6 +650,230 @@ export const ANIME_CATALOG: AnimeEntry[] = [
       binge: ['cyberpunk', 'marvel'],
       commitment: ['season'],
       pacing: ['fast'],
+    },
+  },
+  {
+    id: 'naruto',
+    title: 'NARUTO & NARUTO SHIPPUDEN',
+    subtitle: 'THE GLOBAL SHINOBI PHENOMENON',
+    cassetteCode: 'CASSETTE #201',
+    badge: '220 EPS (PT 1) // SHINOBI EPIC',
+    stamp: 'ALL-TIME GREAT',
+    category: 'legends',
+    episodesLabel: '220 + 500 EPS',
+    genreLabel: 'SHINOBI ACTION // COMING OF AGE',
+    successRate: '98.4% SUCCESS RATE',
+    imdbRating: '8.7 / 10 (IMDb)',
+    platforms: ['CRUNCHYROLL', 'NETFLIX', 'HULU'],
+    posterUrl: narutoImg,
+    posterAlt: 'Hidden ninja village rooftops at dusk with swirling cyan chakra energy.',
+    whyItWorks:
+      'Unforgettable underdog emotion, iconic hand-to-hand choreography, and some of the greatest tournament and villain arcs in television—just skip the filler episodes!',
+    synopsis:
+      'An ostracized orphan ninja harboring a nine-tailed fox spirit dreams of becoming Hokage, forging unbreakable bonds through brutal Chunin Exams and legendary shinobi wars.',
+    episodeOneHook:
+      'Lonely prankster Naruto Uzumaki steals a forbidden scroll and masters the Multi Shadow Clone Jutsu to defend his teacher.',
+    dubVerdict: 'Iconic English Dub (Maile Flanagan, Yuri Lowenthal) and classic Japanese Sub.',
+    weirdnessScore: '2 / 10 (CLASSIC SHONEN)',
+    pacingScore: '8 / 10 (SKIP FILLER GUIDE)',
+    lengthCommitment: '220 EPS (PART 1)',
+    tags: ['HIGH ACTION', 'CRY YOUR EYES OUT', 'ENGLISH DUB APPROVED'],
+    quizProfile: {
+      binge: ['marvel', 'got'],
+      commitment: ['epic'],
+      pacing: ['fast', 'slow'],
+    },
+  },
+  {
+    id: 'one-piece',
+    title: 'ONE PIECE',
+    subtitle: 'THE GREATEST TREASURE VOYAGE EVER TOLD',
+    cassetteCode: 'CASSETTE #202',
+    badge: '1,100+ EPS // PIRATE EPIC',
+    stamp: 'CROWN JEWEL',
+    category: 'legends',
+    episodesLabel: '1,100+ EPS',
+    genreLabel: 'GRAND ADVENTURE // WORLD-BUILDING',
+    successRate: '99.3% SUCCESS RATE',
+    imdbRating: '9.0 / 10 (IMDb)',
+    platforms: ['CRUNCHYROLL', 'NETFLIX'],
+    posterUrl: onePieceImg,
+    posterAlt: 'Pirate galleon sailing across turquoise seas toward golden sky islands.',
+    whyItWorks:
+      'Unmatched 25-year interconnected worldbuilding where every tiny clue pays off hundreds of episodes later. Start with the Arlong Park arc (Eps 31–44) to feel the magic.',
+    synopsis:
+      'Rubber-bodied optimist Monkey D. Luffy gathers an eccentric crew of dreamers to sail the treacherous Grand Line in pursuit of the legendary One Piece treasure.',
+    episodeOneHook:
+      'Luffy bursts out of a wooden barrel on a pirate ship, effortlessly flattening raiders with a rubber Gum-Gum Pistol.',
+    dubVerdict: 'Modern Funimation/Crunchyroll English Dub is great; Japanese Sub features legendary voice acting.',
+    weirdnessScore: '3 / 10 (WHIMSICAL PIRATES)',
+    pacingScore: '7 / 10 (EPIC SLOW BUILD)',
+    lengthCommitment: '1,100+ EPISODES',
+    tags: ['HIGH ACTION', 'CRY YOUR EYES OUT', 'ENGLISH DUB APPROVED'],
+    quizProfile: {
+      binge: ['got', 'cozy'],
+      commitment: ['epic'],
+      pacing: ['slow'],
+    },
+  },
+  {
+    id: 'dragon-ball-z',
+    title: 'DRAGON BALL Z (OR Z KAI)',
+    subtitle: 'THE GODFATHER OF MODERN ACTION ANIME',
+    cassetteCode: 'CASSETTE #203',
+    badge: '167 EPS (KAI) // MARTIAL ARTS',
+    stamp: '90s TITAN',
+    category: 'legends',
+    episodesLabel: '167 EPS (KAI)',
+    genreLabel: '90s MARTIAL ARTS // SCI-FI ACTION',
+    successRate: '98.9% SUCCESS RATE',
+    imdbRating: '8.8 / 10 (IMDb)',
+    platforms: ['CRUNCHYROLL', 'HULU'],
+    posterUrl: dbzImg,
+    posterAlt: 'Mountain tournament arena erupting with golden Super Saiyan ki aura and cyan lightning.',
+    whyItWorks:
+      'Every modern superhero transformation and beam clash owes its DNA to DBZ. Pro tip: watch "Dragon Ball Z Kai" to cut 124 filler episodes and get crisp, punchy pacing.',
+    synopsis:
+      'Saiyan warrior Goku and Earth’s defenders push past mortal limits to battle galactic tyrants, time-traveling androids, and cosmic destroyers.',
+    episodeOneHook:
+      'A mysterious armored warrior lands on Earth, revealing Goku’s alien Saiyan heritage and kidnapping his young son.',
+    dubVerdict: 'Sean Schemmel and Christopher Sabat in the English Dub—especially DBZ Kai—are pure 90s/2000s nostalgia gold.',
+    weirdnessScore: '1 / 10 (PURE MARTIAL ARTS)',
+    pacingScore: '8 / 10 (USE DBZ KAI)',
+    lengthCommitment: '167 EPS (Z KAI)',
+    tags: ['HIGH ACTION', 'ENGLISH DUB APPROVED'],
+    quizProfile: {
+      binge: ['marvel'],
+      commitment: ['epic'],
+      pacing: ['fast'],
+    },
+  },
+  {
+    id: 'bleach',
+    title: 'BLEACH',
+    subtitle: 'STYLE, SWORDS & SOUL REAPERS',
+    cassetteCode: 'CASSETTE #204',
+    badge: '366 EPS + TYBW // SUPERNATURAL',
+    stamp: 'PEAK DRIP',
+    category: 'legends',
+    episodesLabel: '366 + 52 EPS',
+    genreLabel: 'SUPERNATURAL // SWORD ACTION',
+    successRate: '97.6% SUCCESS RATE',
+    imdbRating: '8.2 / 10 (IMDb)',
+    platforms: ['HULU', 'DISNEY+'],
+    posterUrl: bleachImg,
+    posterAlt: 'Moonlit Japanese rooftops with a glowing cyan spiritual katana blade.',
+    whyItWorks:
+      'Unrivaled character drip, Shiro Sagisu’s hip-hop/rock soundtrack, and the legendary Soul Society rescue arc. Skip filler arcs (Eps 64–108) for a razor-sharp binge.',
+    synopsis:
+      'Ghost-seeing teenager Ichigo Kurosaki inherits the powers of a Soul Reaper, defending the living from monstrous Hollows and crossing blades inside the Soul Society.',
+    episodeOneHook:
+      'Ichigo takes a Soul Reaper’s sword through his chest to save his family, awakening a towering Zanpakuto blade.',
+    dubVerdict: 'Johnny Yong Bosch gives one of the coolest English Dub performances in anime history.',
+    weirdnessScore: '1 / 10 (STYLISH ACTION)',
+    pacingScore: '9 / 10 (SKIP FILLER ARCS)',
+    lengthCommitment: '366 EPS (CANON ~203)',
+    tags: ['HIGH ACTION', 'MIND GAMES', 'ENGLISH DUB APPROVED'],
+    quizProfile: {
+      binge: ['marvel', 'cyberpunk'],
+      commitment: ['epic'],
+      pacing: ['fast'],
+    },
+  },
+  {
+    id: 'yu-yu-hakusho',
+    title: 'YU YU HAKUSHO',
+    subtitle: 'THE 90s SPIRIT DETECTIVE MASTERCLASS',
+    cassetteCode: 'CASSETTE #205',
+    badge: '112 EPS // 90s CLASSIC',
+    stamp: 'ZERO FILLER',
+    category: 'legends',
+    episodesLabel: '112 EPS',
+    genreLabel: '90s SUPERNATURAL // TOURNAMENT',
+    successRate: '98.6% SUCCESS RATE',
+    imdbRating: '8.5 / 10 (IMDb)',
+    platforms: ['CRUNCHYROLL', 'HULU', 'NETFLIX'],
+    posterUrl: yuYuHakushoImg,
+    posterAlt: 'Retro 1990s neon Japanese alley illuminated by a glowing emerald spirit sphere.',
+    whyItWorks:
+      'Pure 1990s hand-painted cel atmosphere, zero filler episodes, razor-sharp banter among four unforgettable leads, and the Dark Tournament—still the gold standard of anime tournaments.',
+    synopsis:
+      'Street delinquent Yusuke Urameshi dies saving a child, earns a second chance as Underworld Spirit Detective, and teams up with Hiei, Kurama, and Kuwabara.',
+    episodeOneHook:
+      'Yusuke wakes up as a ghost watching his own funeral—and discovers he wasn’t even supposed to die yet.',
+    dubVerdict: 'Universally acclaimed 90s/2000s English Dub—the witty dialogue actually shines brightest in English.',
+    weirdnessScore: '1 / 10 (90s NOIR ACTION)',
+    pacingScore: '9 / 10 (TIGHT & PUNCHY)',
+    lengthCommitment: '112 EPISODES (COMPLETE)',
+    tags: ['SHORT & FINISHED', 'HIGH ACTION', 'ENGLISH DUB APPROVED'],
+    quizProfile: {
+      binge: ['marvel', 'cyberpunk'],
+      commitment: ['epic', 'season'],
+      pacing: ['fast'],
+    },
+  },
+  {
+    id: 'hajime-no-ippo',
+    title: 'HAJIME NO IPPO (FIGHTING SPIRIT)',
+    subtitle: 'THE ULTIMATE UNDERDOG BOXING THRILL',
+    cassetteCode: 'CASSETTE #206',
+    badge: '75 EPS (S1) // BOXING',
+    stamp: 'PURE HYPE',
+    category: 'legends',
+    episodesLabel: '75 EPS (S1)',
+    genreLabel: 'SPORTS DRAMA // BOXING',
+    successRate: '99.0% SUCCESS RATE',
+    imdbRating: '8.8 / 10 (IMDb)',
+    platforms: ['NETFLIX', 'CRUNCHYROLL'],
+    posterUrl: ippoImg,
+    posterAlt: 'Smoky boxing ring under dramatic white spotlights with red boxing gloves mid-punch.',
+    whyItWorks:
+      'Feels like Rocky I–IV with jet engines strapped to it. Zero superpowers—just heart, brutal training montages, hilarious locker-room comedy, and unforgettable title bouts.',
+    synopsis:
+      'Shy, bullied high schooler Ippo Makunouchi discovers an explosive natural punch after being rescued by pro boxer Takamura and climbs Japan’s featherweight ranks.',
+    episodeOneHook:
+      'Ippo unleashes rapid-fire jabs to catch ten falling leaves in mid-air, realizing the hidden strength built from working his mother’s fishing boat.',
+    dubVerdict: 'Subtitled Japanese matches pack electric intensity; Season 1 also has a classic English Dub.',
+    weirdnessScore: '0 / 10 (GROUNDED SPORTS)',
+    pacingScore: '9 / 10 (ELECTRIC BOUTS)',
+    lengthCommitment: '75 EPISODES (S1)',
+    tags: ['HIGH ACTION', 'CRY YOUR EYES OUT', 'ENGLISH DUB APPROVED'],
+    quizProfile: {
+      binge: ['cozy', 'marvel'],
+      commitment: ['epic', 'season'],
+      pacing: ['fast'],
+    },
+  },
+  {
+    id: 'detective-conan',
+    title: 'DETECTIVE CONAN (CASE CLOSED)',
+    subtitle: 'SHERLOCK HOLMES IN 90s TOKYO',
+    cassetteCode: 'CASSETTE #207',
+    badge: '1,100+ EPS // MYSTERY NOIR',
+    stamp: '90s MYSTERY',
+    category: 'legends',
+    episodesLabel: '1,100+ EPS',
+    genreLabel: 'CLASSIC CRIME MYSTERY // NOIR',
+    successRate: '97.2% SUCCESS RATE',
+    imdbRating: '8.5 / 10 (IMDb)',
+    platforms: ['CRUNCHYROLL', 'NETFLIX'],
+    posterUrl: conanImg,
+    posterAlt: 'Rainy midnight Tokyo rooftop with magnifying glass glinting in moonlight.',
+    whyItWorks:
+      'Like Law & Order meets Sherlock Holmes. Because most episodes are self-contained locked-room mysteries, you can dip in anytime—or follow the overarching Black Organization thriller.',
+    synopsis:
+      'Teen prodigy detective Shinichi Kudo is poisoned by a secret syndicate and shrunk into a seven-year-old’s body, solving impossible crimes in secret while hunting his attackers.',
+    episodeOneHook:
+      'Minutes after solving a grisly roller-coaster decapitation, Shinichi is ambushed by men in black and wakes up in a child’s body.',
+    dubVerdict: 'Classic "Case Closed" English Dub covers early seasons cleanly; Japanese Sub is crisp for later mysteries.',
+    weirdnessScore: '1 / 10 (CLASSIC DETECTIVE)',
+    pacingScore: '8 / 10 (EPISODIC CLUES)',
+    lengthCommitment: 'EPISODIC / WATCH ANYTIME',
+    tags: ['MIND GAMES', 'ENGLISH DUB APPROVED'],
+    quizProfile: {
+      binge: ['crime', 'cozy'],
+      commitment: ['epic', 'season'],
+      pacing: ['slow'],
     },
   },
 ];

@@ -146,6 +146,7 @@ export function RouletteSection({
       quick: 0,
       cozy: 0,
       movie: 0,
+      legends: 0,
     };
     sourceItems.forEach((item) => {
       counts[item.category] += 1;
@@ -184,6 +185,14 @@ export function RouletteSection({
         count: counts.movie,
         barClass: 'bg-primary',
         textClass: 'text-primary',
+      },
+      {
+        key: 'legends' as VaultCategory,
+        label: 'ALL-TIME LEGENDS',
+        pct: Math.round((counts.legends / total) * 100),
+        count: counts.legends,
+        barClass: 'bg-tertiary-fixed-dim',
+        textClass: 'text-tertiary-fixed-dim',
       },
     ];
 

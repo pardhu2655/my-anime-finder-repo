@@ -15,6 +15,8 @@ interface OperatorModalProps {
   onToggleSound: () => void;
   dbzFxEnabled: boolean;
   onToggleDbzFx: () => void;
+  ambientSynth: boolean;
+  onToggleAmbientSynth: () => void;
 }
 
 interface OperatorPreset {
@@ -65,6 +67,8 @@ export function OperatorModal({
   onToggleSound,
   dbzFxEnabled,
   onToggleDbzFx,
+  ambientSynth,
+  onToggleAmbientSynth,
 }: OperatorModalProps) {
   const [tab, setTab] = useState<'watchlist' | 'terminal'>(initialTab);
   const [selectedPreset, setSelectedPreset] = useState<OperatorPreset>(OPERATOR_PRESETS[0]);
@@ -232,8 +236,8 @@ export function OperatorModal({
             </div>
           ) : (
             <div className="space-y-5">
-              {/* System CRT, Audio & DBZ FX Switches */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-surface-container-low p-4 rounded-DEFAULT border border-outline-variant/40">
+              {/* System CRT, Audio, Ambient Synth & DBZ FX Switches */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-surface-container-low p-4 rounded-DEFAULT border border-outline-variant/40">
                 <button
                   type="button"
                   onClick={onToggleCrt}
@@ -256,10 +260,29 @@ export function OperatorModal({
                     <span className="material-symbols-outlined text-secondary-container">
                       {soundEnabled ? 'volume_up' : 'volume_off'}
                     </span>
-                    SYNTH AUDIO
+                    SYNTH BEEPER
                   </span>
                   <span className="font-label-sm text-label-sm text-secondary font-bold">
                     {soundEnabled ? 'ACTIVE' : 'MUTED'}
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  onClick={onToggleAmbientSynth}
+                  className={`flex items-center justify-between p-2.5 bg-surface-container border rounded-DEFAULT transition-colors cursor-pointer ${
+                    ambientSynth
+                      ? 'border-primary-container bg-primary-container/10'
+                      : 'border-outline-variant/40 hover:border-primary-container'
+                  }`}
+                >
+                  <span className="font-label-md text-label-md text-on-surface flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary-container">
+                      graphic_eq
+                    </span>
+                    AMBIENT SYNTH
+                  </span>
+                  <span className="font-label-sm text-label-sm text-primary-container font-bold">
+                    {ambientSynth ? 'LOOPING' : 'OFF'}
                   </span>
                 </button>
                 <button

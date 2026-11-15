@@ -10,7 +10,7 @@ import { OperatorModal } from './components/OperatorModal';
 import { QuizSection } from './components/QuizSection';
 import { RouletteSection } from './components/RouletteSection';
 import { SurvivalGuideSection } from './components/SurvivalGuideSection';
-import { playSynthBeep } from './utils/synthAudio';
+import { playSynthBeep, startAmbientSynth, stopAmbientSynth } from './utils/synthAudio';
 
 const WATCHLIST_KEY = 'neotokyo99_watchlist';
 const COINS_KEY = 'neotokyo99_coins';
@@ -26,6 +26,7 @@ export default function App() {
 
   const [crtHeavy, setCrtHeavy] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
+  const [ambientSynth, setAmbientSynth] = useState(false);
   const [dbzFxEnabled, setDbzFxEnabled] = useState(true);
   const [toast, setToast] = useState<string | null>(null);
 
@@ -68,6 +69,12 @@ export default function App() {
     const timer = setTimeout(() => setToast(null), 2200);
     return () => clearTimeout(timer);
   }, [toast]);
+
+  useEffect(() => {
+    return () => {
+      stopAmbientSynth();
+    };
+  }, []);
 
   const handlePlaySound = (type: 'click' | 'coin' | 'spin' | 'lock' = 'click') => {
     playSynthBeep(soundEnabled, type);
@@ -117,6 +124,20 @@ export default function App() {
     setDbzFxEnabled((prev) => {
       const next = !prev;
       setToast(next ? 'DBZ KI FX: POWERING UP' : 'DBZ KI FX: SUPPRESSED');
+      return next;
+    });
+  };
+
+  const handleToggleAmbientSynth = () => {
+    setAmbientSynth((prev) => {
+      const next = !prev;
+      if (next) {
+        startAmbientSynth();
+        setToast('AMBIENT SYNTH: 90s LOOP ACTIVE');
+      } else {
+        stopAmbientSynth();
+        setToast('AMBIENT SYNTH: OFFLINE');
+      }
       return next;
     });
   };
@@ -294,6 +315,8 @@ export default function App() {
         onToggleSound={handleToggleSound}
         dbzFxEnabled={dbzFxEnabled}
         onToggleDbzFx={handleToggleDbzFx}
+        ambientSynth={ambientSynth}
+        onToggleAmbientSynth={handleToggleAmbientSynth}
       />
     </div>
   );
