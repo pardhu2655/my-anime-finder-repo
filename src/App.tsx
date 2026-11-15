@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AnimeEntry } from './data/animeVault';
+import { DbzBackgroundFX } from './components/DbzBackgroundFX';
 import { DossierModal } from './components/DossierModal';
 import { Footer } from './components/Footer';
 import { HallOfFameSection } from './components/HallOfFameSection';
@@ -25,6 +26,7 @@ export default function App() {
 
   const [crtHeavy, setCrtHeavy] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
+  const [dbzFxEnabled, setDbzFxEnabled] = useState(true);
   const [toast, setToast] = useState<string | null>(null);
 
   const [watchlistIds, setWatchlistIds] = useState<string[]>(() => {
@@ -110,8 +112,18 @@ export default function App() {
     });
   };
 
+  const handleToggleDbzFx = () => {
+    handlePlaySound('click');
+    setDbzFxEnabled((prev) => {
+      const next = !prev;
+      setToast(next ? 'DBZ KI FX: POWERING UP' : 'DBZ KI FX: SUPPRESSED');
+      return next;
+    });
+  };
+
   return (
     <div className="min-h-screen flex flex-col font-body-md text-body-md text-on-background relative">
+      <DbzBackgroundFX enabled={dbzFxEnabled} />
       <Header
         activeScreen={activeScreen}
         onNavigate={handleNavigate}
@@ -141,7 +153,7 @@ export default function App() {
 
       {/* Focused Sub-Screen Navigation Strip */}
       {activeScreen !== 'radar' && (
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
           <div className="flex items-center justify-between bg-surface-container-low border border-primary-container/40 px-4 py-2.5 rounded-DEFAULT">
             <button
               type="button"
@@ -159,10 +171,17 @@ export default function App() {
       )}
 
       {/* MAIN CANVAS */}
-      <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+      <main className="relative z-10 flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
         {activeScreen === 'radar' && (
           <>
-            <HeroSection onNavigate={handleNavigate} crtHeavy={crtHeavy} />
+            <HeroSection
+              onNavigate={handleNavigate}
+              crtHeavy={crtHeavy}
+              onSelectAnime={setSelectedAnime}
+              onPlaySound={handlePlaySound}
+              watchlistIds={watchlistIds}
+              onToggleWatchlist={handleToggleWatchlist}
+            />
             <QuizSection
               onSelectAnime={setSelectedAnime}
               onPlaySound={handlePlaySound}
@@ -273,6 +292,8 @@ export default function App() {
         onToggleCrt={handleToggleCrt}
         soundEnabled={soundEnabled}
         onToggleSound={handleToggleSound}
+        dbzFxEnabled={dbzFxEnabled}
+        onToggleDbzFx={handleToggleDbzFx}
       />
     </div>
   );

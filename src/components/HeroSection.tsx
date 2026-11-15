@@ -1,13 +1,60 @@
-import { HOTLINKED_ASSETS } from '../data/animeVault';
+import { useEffect, useMemo, useState } from 'react';
+import {
+  AnimeEntry,
+  HOTLINKED_ASSETS,
+  getDailyDateKey,
+  getDailyRecommendedAnime,
+} from '../data/animeVault';
 import { ImageWithFallback } from './ImageWithFallback';
 import { ScreenId } from './Header';
 
 interface HeroSectionProps {
   onNavigate: (screen: ScreenId) => void;
   crtHeavy: boolean;
+  onSelectAnime: (anime: AnimeEntry) => void;
+  onPlaySound: (type?: 'click' | 'coin' | 'spin' | 'lock') => void;
+  watchlistIds: string[];
+  onToggleWatchlist: (id: string) => void;
 }
 
-export function HeroSection({ onNavigate, crtHeavy }: HeroSectionProps) {
+function getTimeUntilMidnight(now: Date): string {
+  const nextMidnight = new Date(now);
+  nextMidnight.setHours(24, 0, 0, 0);
+  const diffSec = Math.max(0, Math.floor((nextMidnight.getTime() - now.getTime()) / 1000));
+  const hrs = String(Math.floor(diffSec / 3600)).padStart(2, '0');
+  const mins = String(Math.floor((diffSec % 3600) / 60)).padStart(2, '0');
+  const secs = String(diffSec % 60).padStart(2, '0');
+  return `${hrs}:${mins}:${secs}`;
+}
+
+export function HeroSection({
+  onNavigate,
+  crtHeavy,
+  onSelectAnime,
+  onPlaySound,
+  watchlistIds,
+  onToggleWatchlist,
+}: HeroSectionProps) {
+  const [now, setNow] = useState<Date>(() => new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setNow(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const currentDayKey = getDailyDateKey(now);
+  const { anime: dailyPick, dateKey } = useMemo(
+    () => getDailyRecommendedAnime(now),
+    // Re-seed strictly when the local calendar date changes (every 24h)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [currentDayKey]
+  );
+
+  const countdown = getTimeUntilMidnight(now);
+  const isDailySaved = watchlistIds.includes(dailyPick.id);
+
   return (
     <section
       id="hero"
@@ -115,6 +162,108 @@ export function HeroSection({ onNavigate, crtHeavy }: HeroSectionProps) {
           </div>
         </div>
       </div>
+
+      {/* Daily Recommended Anime Spotlight (24-Hour Date-Seeded Rotation) */}
+      <div className="relative z-20 mt-8 pt-6 border-t border-primary-container/30">
+        <div className="bg-surface-container-low border border-secondary-container/60 rounded-DEFAULT p-4 sm:p-5 arcade-shadow-cyan">
+          <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-outline-variant/40">
+            <div className="flex items-center gap-2.5 flex-wrap">
+              <span className="holo-stamp text-surface-container-lowest font-label-md text-label-md px-2.5 py-0.5 font-bold rounded-DEFAULT tracking-widest uppercase">
+                RECOMMENDED ANIME
+              </span>
+              <span className="font-label-sm text-label-sm text-primary-container tracking-widest uppercase">
+                DAILY BROADCAST PICK // {dateKey}
+              </span>
+            </div>
+            <div className="font-label-sm text-label-sm text-tertiary-container tabular-nums flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-sm">schedule</span>
+              <span>NEXT 24H ROTATION IN {countdown}</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+            <button
+              type="button"
+              onClick={() => {
+                onPlaySound('lock');
+                onSelectAnime(dailyPick);
+              }}
+              className="md:col-span-4 lg:col-span-3 relative aspect-video rounded-DEFAULT overflow-hidden border border-primary-container/50 bg-surface-container-lowest group cursor-pointer block text-left"
+            >
+              <ImageWithFallback
+                src={dailyPick.posterUrl}
+                alt={dailyPick.posterAlt}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                fallbackLabel={dailyPick.title}
+              />
+              <div
+                className={`${crtHeavy ? 'crt-overlay-heavy' : 'crt-overlay'} absolute inset-0`}
+              />
+              <div className="absolute top-2 left-2 bg-secondary-container text-white px-2 py-0.5 rounded-DEFAULT font-label-sm text-label-sm font-bold">
+                {dailyPick.cassetteCode}
+              </div>
+              <div className="absolute bottom-2 right-2 bg-surface-container-lowest/90 border border-primary-container/50 text-primary-container px-2 py-0.5 rounded-DEFAULT font-label-sm text-label-sm tabular-nums">
+                {dailyPick.imdbRating}
+              </div>
+            </button>
+
+            <div className="md:col-span-8 lg:col-span-6 space-y-1.5 min-w-0">
+              <div className="flex items-center gap-2 flex-wrap font-label-sm text-label-sm">
+                <span className="text-tertiary-container font-bold uppercase tracking-wider">
+                  {dailyPick.genreLabel}
+                </span>
+                <span className="text-outline-variant">/</span>
+                <span className="text-primary-container font-bold">{dailyPick.successRate}</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  onPlaySound('lock');
+                  onSelectAnime(dailyPick);
+                }}
+                className="text-left font-headline-md text-headline-sm sm:text-headline-md text-on-surface hover:text-primary-container transition-colors uppercase cursor-pointer block"
+              >
+                {dailyPick.title}
+              </button>
+              <p className="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                {dailyPick.whyItWorks}
+              </p>
+            </div>
+
+            <div className="md:col-span-12 lg:col-span-3 flex flex-wrap lg:flex-col gap-2.5 lg:items-stretch shrink-0">
+              <button
+                type="button"
+                onClick={() => {
+                  onPlaySound('lock');
+                  onSelectAnime(dailyPick);
+                }}
+                className="flex-1 bg-primary-container text-surface-container-lowest font-label-md text-label-md font-bold px-4 py-2.5 rounded-DEFAULT shadow-[2px_2px_0px_#ff4a8d] hover:translate-x-[1px] hover:translate-y-[1px] transition-all uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap"
+              >
+                <span className="material-symbols-outlined text-lg">play_circle</span>
+                INSPECT DAILY PICK
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  onPlaySound('click');
+                  onToggleWatchlist(dailyPick.id);
+                }}
+                className={`px-4 py-2 rounded-DEFAULT border font-label-sm text-label-sm uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all cursor-pointer whitespace-nowrap ${
+                  isDailySaved
+                    ? 'bg-secondary-container border-secondary-container text-white font-bold'
+                    : 'bg-surface-container border-outline-variant text-secondary hover:border-secondary-container'
+                }`}
+              >
+                <span className="material-symbols-outlined text-base">
+                  {isDailySaved ? 'bookmark_added' : 'bookmark_add'}
+                </span>
+                {isDailySaved ? 'SAVED IN DECK' : 'SAVE DAILY PICK'}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
+

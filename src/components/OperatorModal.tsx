@@ -13,6 +13,8 @@ interface OperatorModalProps {
   onToggleCrt: () => void;
   soundEnabled: boolean;
   onToggleSound: () => void;
+  dbzFxEnabled: boolean;
+  onToggleDbzFx: () => void;
 }
 
 interface OperatorPreset {
@@ -61,6 +63,8 @@ export function OperatorModal({
   onToggleCrt,
   soundEnabled,
   onToggleSound,
+  dbzFxEnabled,
+  onToggleDbzFx,
 }: OperatorModalProps) {
   const [tab, setTab] = useState<'watchlist' | 'terminal'>(initialTab);
   const [selectedPreset, setSelectedPreset] = useState<OperatorPreset>(OPERATOR_PRESETS[0]);
@@ -228,8 +232,8 @@ export function OperatorModal({
             </div>
           ) : (
             <div className="space-y-5">
-              {/* System CRT & Audio Switches */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-surface-container-low p-4 rounded-DEFAULT border border-outline-variant/40">
+              {/* System CRT, Audio & DBZ FX Switches */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-surface-container-low p-4 rounded-DEFAULT border border-outline-variant/40">
                 <button
                   type="button"
                   onClick={onToggleCrt}
@@ -237,7 +241,7 @@ export function OperatorModal({
                 >
                   <span className="font-label-md text-label-md text-on-surface flex items-center gap-2">
                     <span className="material-symbols-outlined text-primary-container">tv</span>
-                    CRT SCANLINE PRESET
+                    CRT SCANLINE
                   </span>
                   <span className="font-label-sm text-label-sm text-primary-container font-bold">
                     {crtHeavy ? 'HEAVY 99' : 'STANDARD'}
@@ -252,10 +256,23 @@ export function OperatorModal({
                     <span className="material-symbols-outlined text-secondary-container">
                       {soundEnabled ? 'volume_up' : 'volume_off'}
                     </span>
-                    SYNTH AUDIO BEEPER
+                    SYNTH AUDIO
                   </span>
                   <span className="font-label-sm text-label-sm text-secondary font-bold">
                     {soundEnabled ? 'ACTIVE' : 'MUTED'}
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  onClick={onToggleDbzFx}
+                  className="flex items-center justify-between p-2.5 bg-surface-container border border-outline-variant/40 rounded-DEFAULT hover:border-tertiary-container transition-colors cursor-pointer"
+                >
+                  <span className="font-label-md text-label-md text-on-surface flex items-center gap-2">
+                    <span className="material-symbols-outlined text-tertiary-container">bolt</span>
+                    DBZ KI FX
+                  </span>
+                  <span className="font-label-sm text-label-sm text-tertiary-container font-bold">
+                    {dbzFxEnabled ? 'ON' : 'OFF'}
                   </span>
                 </button>
               </div>

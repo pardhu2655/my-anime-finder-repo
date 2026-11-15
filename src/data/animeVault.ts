@@ -707,3 +707,35 @@ export function matchQuizRecommendation(
   const pct = Math.min(99.6, Math.max(91.4, 88.2 + bestScore * 0.085)).toFixed(1);
   return { anime: best, compatibility: `${pct}% COMPATIBILITY` };
 }
+
+export function getDailyDateKey(date: Date = new Date()): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+export function getDailyRecommendedAnime(date: Date = new Date()): {
+  anime: AnimeEntry;
+  dateKey: string;
+} {
+  const dateKey = getDailyDateKey(date);
+  // Deterministic FNV-1a + Murmur-style mix seeded by the YYYY-MM-DD date string
+  let hash = 2166136261;
+  for (let i = 0; i < dateKey.length; i++) {
+    hash ^= dateKey.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  hash ^= hash >>> 16;
+  hash = Math.imul(hash, 0x85ebca6b);
+  hash ^= hash >>> 13;
+  hash = Math.imul(hash, 0xc2b2ae35);
+  hash ^= hash >>> 16;
+
+  const index = (hash >>> 0) % ANIME_CATALOG.length;
+  return {
+    anime: ANIME_CATALOG[index],
+    dateKey,
+  };
+}
+
