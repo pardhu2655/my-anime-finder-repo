@@ -5,6 +5,15 @@ import bleachImg from '../assets/images/anime_bleach_soul_blade_1794727289721.jp
 import yuYuHakushoImg from '../assets/images/anime_yuyuhakusho_spirit_1794727290398.jpg';
 import ippoImg from '../assets/images/anime_ippo_boxing_ring_1794727290201.jpg';
 import conanImg from '../assets/images/anime_conan_mystery_night_1794727291582.jpg';
+import spyFamilyImg from '../assets/images/spy_family_livingroom_1794731241888.jpg';
+import frierenImg from '../assets/images/frieren_flower_meadow_1794731241430.jpg';
+import haikyuImg from '../assets/images/haikyu_volleyball_spike_1794731244312.jpg';
+import spiritedAwayImg from '../assets/images/spirited_away_bathhouse_1794731244001.jpg';
+import yourNameImg from '../assets/images/your_name_comet_1794731241619.jpg';
+import akiraImg from '../assets/images/akira_highway_bike_1794731246530.jpg';
+import erasedImg from '../assets/images/erased_winter_street_1794731246252.jpg';
+import jjkImg from '../assets/images/jjk_cursed_rooftop_1794731245862.jpg';
+import vivyImg from '../assets/images/vivy_hologram_stage_1794731246281.jpg';
 
 export type BingeType = 'got' | 'crime' | 'cyberpunk' | 'marvel' | 'cozy';
 export type CommitmentType = 'movie' | 'season' | 'epic';
@@ -344,8 +353,8 @@ export const ANIME_CATALOG: AnimeEntry[] = [
     successRate: '99.4% SUCCESS RATE',
     imdbRating: '8.4 / 10 (IMDb)',
     platforms: ['CRUNCHYROLL', 'HULU', 'NETFLIX'],
-    posterUrl: HOTLINKED_ASSETS.heroAlley,
-    posterAlt: 'Retro cybernetic city neon aesthetic card preview.',
+    posterUrl: spyFamilyImg,
+    posterAlt: 'Warm 1960s retro-European apartment living room with emerald armchair, red roses, and city twilight windows.',
     whyItWorks:
       'Guaranteed smile on your face from the first scene. A fake family built on secrets, telepathy, and genuine heart without any stressful angst.',
     synopsis:
@@ -376,8 +385,8 @@ export const ANIME_CATALOG: AnimeEntry[] = [
     successRate: '99.2% SUCCESS RATE',
     imdbRating: '8.9 / 10 (IMDb)',
     platforms: ['CRUNCHYROLL', 'NETFLIX'],
-    posterUrl: HOTLINKED_ASSETS.fma,
-    posterAlt: 'Atmospheric fantasy world aesthetic.',
+    posterUrl: frierenImg,
+    posterAlt: 'Sunlit fantasy wildflower meadow with moss-covered stone ruins and glowing cyan mana wisps.',
     whyItWorks:
       'Starts where other fantasy stories end. Gentle acoustic score, breathtaking painted backgrounds, and deeply human warmth without melodrama.',
     synopsis:
@@ -408,8 +417,8 @@ export const ANIME_CATALOG: AnimeEntry[] = [
     successRate: '97.4% SUCCESS RATE',
     imdbRating: '8.7 / 10 (IMDb)',
     platforms: ['NETFLIX', 'CRUNCHYROLL'],
-    posterUrl: HOTLINKED_ASSETS.demonSlayer,
-    posterAlt: 'Dynamic high-energy sports anime motion.',
+    posterUrl: haikyuImg,
+    posterAlt: 'High-energy indoor gymnasium volleyball match with a spiked blue-and-yellow ball clearing the net.',
     whyItWorks:
       'Like Ted Lasso meets Friday Night Lights. Even if you have zero interest in volleyball, the camaraderie and match tension are impossible to resist.',
     synopsis:
@@ -440,8 +449,8 @@ export const ANIME_CATALOG: AnimeEntry[] = [
     successRate: '99.5% SUCCESS RATE',
     imdbRating: '8.6 / 10 (IMDb)',
     platforms: ['MAX // HBO'],
-    posterUrl: HOTLINKED_ASSETS.heroAlley,
-    posterAlt: 'Lush hand-drawn spirit realm atmosphere.',
+    posterUrl: spiritedAwayImg,
+    posterAlt: 'Enchanted vermilion wooden bridge leading to a glowing paper-lantern spirit bathhouse at twilight.',
     whyItWorks:
       'Zero episodic commitment, Academy Award winner for Best Animated Feature, and an unforgettable introduction to hand-drawn Japanese artistry.',
     synopsis:
@@ -472,8 +481,8 @@ export const ANIME_CATALOG: AnimeEntry[] = [
     successRate: '98.7% SUCCESS RATE',
     imdbRating: '8.4 / 10 (IMDb)',
     platforms: ['CRUNCHYROLL', 'RENT / STREAM'],
-    posterUrl: HOTLINKED_ASSETS.quizAot,
-    posterAlt: 'Luminous comet sky and cinematic anime vista.',
+    posterUrl: yourNameImg,
+    posterAlt: 'Luminous split comet streaking over a serene Japanese crater lake, torii gate, and twilight mountains.',
     whyItWorks:
       'Plays like a blockbuster Hollywood mystery-romance with gorgeous photorealistic backgrounds and a third-act twist that hits hard.',
     synopsis:
@@ -504,8 +513,8 @@ export const ANIME_CATALOG: AnimeEntry[] = [
     successRate: '95.8% SUCCESS RATE',
     imdbRating: '8.0 / 10 (IMDb)',
     platforms: ['HULU', 'CRUNCHYROLL'],
-    posterUrl: HOTLINKED_ASSETS.edgerunners,
-    posterAlt: 'Neo-Tokyo neon cityscape and light trails.',
+    posterUrl: akiraImg,
+    posterAlt: 'Crimson racing motorcycle carving through Neo-Tokyo elevated expressways with glowing red light trails.',
     whyItWorks:
       'If you love Blade Runner, The Matrix, or Stranger Things, this 1988 hand-painted milestone is the literal DNA behind modern sci-fi cinema.',
     synopsis:
@@ -569,8 +578,8 @@ export const ANIME_CATALOG: AnimeEntry[] = [
     successRate: '98.4% SUCCESS RATE',
     imdbRating: '8.5 / 10 (IMDb)',
     platforms: ['CRUNCHYROLL', 'HULU'],
-    posterUrl: HOTLINKED_ASSETS.deathNote,
-    posterAlt: 'Moody nocturnal mystery desk scene.',
+    posterUrl: erasedImg,
+    posterAlt: 'Snowy 1980s northern Japanese town street at dusk under amber streetlamps and glowing storefronts.',
     whyItWorks:
       'Tighter than a Netflix limited series. Zero weird tropes—just pure suspense, emotional warmth, and cliffhangers at the end of every 22-minute episode.',
     synopsis:
@@ -601,8 +610,8 @@ export const ANIME_CATALOG: AnimeEntry[] = [
     successRate: '98.5% SUCCESS RATE',
     imdbRating: '8.6 / 10 (IMDb)',
     platforms: ['CRUNCHYROLL', 'NETFLIX'],
-    posterUrl: HOTLINKED_ASSETS.aotWall,
-    posterAlt: 'High-stakes supernatural battle aesthetic.',
+    posterUrl: jjkImg,
+    posterAlt: 'Moonlit Tokyo Shibuya rooftop crackling with dark crimson and electric indigo cursed energy.',
     whyItWorks:
       'Incredible combat choreography, supernatural curse lore, and charismatic characters with Marvel-level entertainment value and flawless pacing.',
     synopsis:
@@ -633,8 +642,8 @@ export const ANIME_CATALOG: AnimeEntry[] = [
     successRate: '96.2% SUCCESS RATE',
     imdbRating: '8.1 / 10 (IMDb)',
     platforms: ['CRUNCHYROLL'],
-    posterUrl: HOTLINKED_ASSETS.cowboyBebop,
-    posterAlt: 'Sleek futuristic cyberpunk scene.',
+    posterUrl: vivyImg,
+    posterAlt: 'Futuristic holographic concert dome stage with glowing cyan grand piano and optical data ribbons.',
     whyItWorks:
       'Complete 13-episode original story written by the creator of Re:Zero and animated by Attack on Titan’s studio. Stunning action and zero filler.',
     synopsis:
